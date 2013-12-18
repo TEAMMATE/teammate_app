@@ -14,7 +14,6 @@
 		04125ECB1852FC1F001E1B9A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125ECA1852FC1F001E1B9A /* logo.png */; };
 		04125ECD1852FD19001E1B9A /* logo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125ECC1852FD19001E1B9A /* logo4.png */; };
 		04125ECF1852FDB0001E1B9A /* T114.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125ECE1852FDB0001E1B9A /* T114.png */; };
-		04125ED1185351C2001E1B9A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04125ED0185351C2001E1B9A /* FacebookSDK.framework */; };
 		04125ED818562002001E1B9A /* logViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04125ED318561DFA001E1B9A /* logViewController.m */; };
 		041D19D7177D6CC700352260 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041D19D6177D6CC700352260 /* UIKit.framework */; };
 		041D19D9177D6CC700352260 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041D19D8177D6CC700352260 /* Foundation.framework */; };
@@ -31,17 +30,18 @@
 		045FE84017ABAFAD0064D82B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045FE83E17ABAFAD0064D82B /* Model.xcdatamodeld */; };
 		049AD2AF185DF6230076F5AD /* tabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AD2AE185DF6230076F5AD /* tabViewController.m */; };
 		049AD2B2185DF7F90076F5AD /* introViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AD2B1185DF7F90076F5AD /* introViewController.m */; };
-		049AFF2D178186BC00BD35B6 /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF2A178186BC00BD35B6 /* game.png */; };
-		049AFF2E178186BC00BD35B6 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF2B178186BC00BD35B6 /* player.png */; };
-		049AFF2F178186BC00BD35B6 /* teammate.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF2C178186BC00BD35B6 /* teammate.png */; };
-		049AFF321781885200BD35B6 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF301781885200BD35B6 /* basketball.png */; };
-		049AFF331781885200BD35B6 /* man-figure.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF311781885200BD35B6 /* man-figure.png */; };
-		049AFF3517818DC100BD35B6 /* E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF3417818DC100BD35B6 /* E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png */; };
-		049AFF3717819A8100BD35B6 /* Jason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF3617819A8100BD35B6 /* Jason.jpg */; };
-		049AFF3C178D2F2600BD35B6 /* Ike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF38178D2F2600BD35B6 /* Ike.jpg */; };
-		049AFF3D178D2F2600BD35B6 /* Star.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF39178D2F2600BD35B6 /* Star.jpg */; };
-		049AFF3E178D2F2600BD35B6 /* George.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF3A178D2F2600BD35B6 /* George.jpg */; };
-		049AFF3F178D2F2600BD35B6 /* Terry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AFF3B178D2F2600BD35B6 /* Terry.jpg */; };
+		049AD2B418617EFE0076F5AD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AD2B318617EFE0076F5AD /* FacebookSDK.framework */; };
+		049AD2B618617FAA0076F5AD /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2B518617FAA0076F5AD /* game.png */; };
+		049AD2B818617FBF0076F5AD /* Star.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2B718617FBF0076F5AD /* Star.jpg */; };
+		049AD2BA186180110076F5AD /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2B9186180110076F5AD /* player.png */; };
+		049AD2BC186180270076F5AD /* Jason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2BB186180270076F5AD /* Jason.jpg */; };
+		049AD2BE186180460076F5AD /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2BD186180460076F5AD /* basketball.png */; };
+		049AD2C0186180700076F5AD /* teammate.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2BF186180700076F5AD /* teammate.png */; };
+		049AD2C2186180950076F5AD /* man-figure.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C1186180950076F5AD /* man-figure.png */; };
+		049AD2C4186180AA0076F5AD /* George.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C3186180AA0076F5AD /* George.jpg */; };
+		049AD2C6186180B50076F5AD /* Ike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C5186180B50076F5AD /* Ike.jpg */; };
+		049AD2C8186180C10076F5AD /* Terry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C7186180C10076F5AD /* Terry.jpg */; };
+		049AD2CA186180E90076F5AD /* teammany.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C9186180E90076F5AD /* teammany.png */; };
 		04A32BCE17A2990B0010CC1C /* teamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BCD17A2990B0010CC1C /* teamViewController.m */; };
 		04A32BD117A2991D0010CC1C /* playerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD017A2991C0010CC1C /* playerViewController.m */; };
 		04A32BD417A299600010CC1C /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD317A299600010CC1C /* recordViewController.m */; };
@@ -75,7 +75,6 @@
 		04125ECA1852FC1F001E1B9A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		04125ECC1852FD19001E1B9A /* logo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo4.png; sourceTree = "<group>"; };
 		04125ECE1852FDB0001E1B9A /* T114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T114.png; sourceTree = "<group>"; };
-		04125ED0185351C2001E1B9A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
 		04125ED218561DFA001E1B9A /* logViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logViewController.h; sourceTree = "<group>"; };
 		04125ED318561DFA001E1B9A /* logViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logViewController.m; sourceTree = "<group>"; };
 		041D19D3177D6CC700352260 /* ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ui.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,17 +99,18 @@
 		049AD2AE185DF6230076F5AD /* tabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabViewController.m; sourceTree = "<group>"; };
 		049AD2B0185DF7F90076F5AD /* introViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = introViewController.h; sourceTree = "<group>"; };
 		049AD2B1185DF7F90076F5AD /* introViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = introViewController.m; sourceTree = "<group>"; };
-		049AFF2A178186BC00BD35B6 /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = game.png; path = ../../../Downloads/icon/game.png; sourceTree = "<group>"; };
-		049AFF2B178186BC00BD35B6 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = ../../../Downloads/icon/player.png; sourceTree = "<group>"; };
-		049AFF2C178186BC00BD35B6 /* teammate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teammate.png; path = ../../../Downloads/icon/teammate.png; sourceTree = "<group>"; };
-		049AFF301781885200BD35B6 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = basketball.png; path = ../../basketball.png; sourceTree = "<group>"; };
-		049AFF311781885200BD35B6 /* man-figure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "man-figure.png"; path = "../../man-figure.png"; sourceTree = "<group>"; };
-		049AFF3417818DC100BD35B6 /* E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png; path = ../../E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png; sourceTree = "<group>"; };
-		049AFF3617819A8100BD35B6 /* Jason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jason.jpg; path = ../../Jason.jpg; sourceTree = "<group>"; };
-		049AFF38178D2F2600BD35B6 /* Ike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ike.jpg; path = ../../Ike.jpg; sourceTree = "<group>"; };
-		049AFF39178D2F2600BD35B6 /* Star.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Star.jpg; path = ../../Star.jpg; sourceTree = "<group>"; };
-		049AFF3A178D2F2600BD35B6 /* George.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = George.jpg; path = ../../George.jpg; sourceTree = "<group>"; };
-		049AFF3B178D2F2600BD35B6 /* Terry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Terry.jpg; path = ../../Terry.jpg; sourceTree = "<group>"; };
+		049AD2B318617EFE0076F5AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
+		049AD2B518617FAA0076F5AD /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
+		049AD2B718617FBF0076F5AD /* Star.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Star.jpg; sourceTree = "<group>"; };
+		049AD2B9186180110076F5AD /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		049AD2BB186180270076F5AD /* Jason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jason.jpg; sourceTree = "<group>"; };
+		049AD2BD186180460076F5AD /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
+		049AD2BF186180700076F5AD /* teammate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teammate.png; sourceTree = "<group>"; };
+		049AD2C1186180950076F5AD /* man-figure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man-figure.png"; sourceTree = "<group>"; };
+		049AD2C3186180AA0076F5AD /* George.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = George.jpg; sourceTree = "<group>"; };
+		049AD2C5186180B50076F5AD /* Ike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ike.jpg; sourceTree = "<group>"; };
+		049AD2C7186180C10076F5AD /* Terry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Terry.jpg; sourceTree = "<group>"; };
+		049AD2C9186180E90076F5AD /* teammany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teammany.png; sourceTree = "<group>"; };
 		04A32BCC17A2990B0010CC1C /* teamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamViewController.h; sourceTree = "<group>"; };
 		04A32BCD17A2990B0010CC1C /* teamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamViewController.m; sourceTree = "<group>"; };
 		04A32BCF17A2991C0010CC1C /* playerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerViewController.h; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BE4C3A17B1781300FAAEC1 /* CoreData.framework in Frameworks */,
-				04125ED1185351C2001E1B9A /* FacebookSDK.framework in Frameworks */,
+				049AD2B418617EFE0076F5AD /* FacebookSDK.framework in Frameworks */,
 				041D19D7177D6CC700352260 /* UIKit.framework in Frameworks */,
 				041D19D9177D6CC700352260 /* Foundation.framework in Frameworks */,
 				041D19DB177D6CC700352260 /* CoreGraphics.framework in Frameworks */,
@@ -182,7 +182,7 @@
 		041D19D5177D6CC700352260 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04125ED0185351C2001E1B9A /* FacebookSDK.framework */,
+				049AD2B318617EFE0076F5AD /* FacebookSDK.framework */,
 				04BE4C3917B1781300FAAEC1 /* CoreData.framework */,
 				041D19D6177D6CC700352260 /* UIKit.framework */,
 				041D19D8177D6CC700352260 /* Foundation.framework */,
@@ -237,27 +237,27 @@
 		045FE83D17ABAF550064D82B /* photo */ = {
 			isa = PBXGroup;
 			children = (
-				049AFF38178D2F2600BD35B6 /* Ike.jpg */,
 				04D141C61801E5A2001617F7 /* Lin.jpg */,
 				04125EBC1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png */,
 				04D141C41801E588001617F7 /* Ding.jpg */,
 				04125EC41852F76E001E1B9A /* Default-568h@2x~iphone.png */,
+				049AD2C5186180B50076F5AD /* Ike.jpg */,
 				04125ECE1852FDB0001E1B9A /* T114.png */,
 				04125ECA1852FC1F001E1B9A /* logo.png */,
 				04125EC51852F76E001E1B9A /* Default@2x~iphone.png */,
 				04125ECC1852FD19001E1B9A /* logo4.png */,
 				04125EC61852F76E001E1B9A /* Default~iphone.png */,
-				049AFF39178D2F2600BD35B6 /* Star.jpg */,
-				049AFF2A178186BC00BD35B6 /* game.png */,
-				049AFF2B178186BC00BD35B6 /* player.png */,
-				049AFF3617819A8100BD35B6 /* Jason.jpg */,
-				049AFF301781885200BD35B6 /* basketball.png */,
+				049AD2B718617FBF0076F5AD /* Star.jpg */,
+				049AD2B518617FAA0076F5AD /* game.png */,
+				049AD2B9186180110076F5AD /* player.png */,
+				049AD2BD186180460076F5AD /* basketball.png */,
+				049AD2BB186180270076F5AD /* Jason.jpg */,
 				04CFAD5D17CB253800DB66C8 /* 團體照.jpg */,
-				049AFF3417818DC100BD35B6 /* E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png */,
-				049AFF311781885200BD35B6 /* man-figure.png */,
-				049AFF2C178186BC00BD35B6 /* teammate.png */,
-				049AFF3A178D2F2600BD35B6 /* George.jpg */,
-				049AFF3B178D2F2600BD35B6 /* Terry.jpg */,
+				049AD2C9186180E90076F5AD /* teammany.png */,
+				049AD2C3186180AA0076F5AD /* George.jpg */,
+				049AD2C7186180C10076F5AD /* Terry.jpg */,
+				049AD2C1186180950076F5AD /* man-figure.png */,
+				049AD2BF186180700076F5AD /* teammate.png */,
 			);
 			name = photo;
 			sourceTree = "<group>";
@@ -364,25 +364,25 @@
 				04125EC81852F76E001E1B9A /* Default@2x~iphone.png in Resources */,
 				04125EC91852F76E001E1B9A /* Default~iphone.png in Resources */,
 				04125ECB1852FC1F001E1B9A /* logo.png in Resources */,
+				049AD2C2186180950076F5AD /* man-figure.png in Resources */,
 				041D19E1177D6CC700352260 /* InfoPlist.strings in Resources */,
+				049AD2C0186180700076F5AD /* teammate.png in Resources */,
+				049AD2B618617FAA0076F5AD /* game.png in Resources */,
 				041D19F0177D6CC700352260 /* MainStoryboard_iPhone.storyboard in Resources */,
-				049AFF2D178186BC00BD35B6 /* game.png in Resources */,
+				049AD2B818617FBF0076F5AD /* Star.jpg in Resources */,
 				04125EC71852F76E001E1B9A /* Default-568h@2x~iphone.png in Resources */,
+				049AD2CA186180E90076F5AD /* teammany.png in Resources */,
+				049AD2C8186180C10076F5AD /* Terry.jpg in Resources */,
 				04125EBD1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png in Resources */,
-				049AFF2E178186BC00BD35B6 /* player.png in Resources */,
-				049AFF2F178186BC00BD35B6 /* teammate.png in Resources */,
-				049AFF321781885200BD35B6 /* basketball.png in Resources */,
-				049AFF331781885200BD35B6 /* man-figure.png in Resources */,
-				049AFF3517818DC100BD35B6 /* E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png in Resources */,
-				049AFF3717819A8100BD35B6 /* Jason.jpg in Resources */,
-				049AFF3C178D2F2600BD35B6 /* Ike.jpg in Resources */,
-				049AFF3D178D2F2600BD35B6 /* Star.jpg in Resources */,
-				049AFF3E178D2F2600BD35B6 /* George.jpg in Resources */,
-				049AFF3F178D2F2600BD35B6 /* Terry.jpg in Resources */,
 				04CFAD5E17CB253800DB66C8 /* 團體照.jpg in Resources */,
+				049AD2C6186180B50076F5AD /* Ike.jpg in Resources */,
 				04AD06011801C1AF0063856F /* playercell.xib in Resources */,
+				049AD2BC186180270076F5AD /* Jason.jpg in Resources */,
+				049AD2C4186180AA0076F5AD /* George.jpg in Resources */,
+				049AD2BA186180110076F5AD /* player.png in Resources */,
 				04125ECF1852FDB0001E1B9A /* T114.png in Resources */,
 				04D141C51801E588001617F7 /* Ding.jpg in Resources */,
+				049AD2BE186180460076F5AD /* basketball.png in Resources */,
 				04D141C71801E5A2001617F7 /* Lin.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +537,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mac/Desktop/ui/ui,
+					/Users/mac/Desktop/ui/teammate_app/ui,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ui/ui-Prefix.pch";
@@ -553,6 +554,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mac/Desktop/ui/ui,
+					/Users/mac/Desktop/ui/teammate_app/ui,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ui/ui-Prefix.pch";
