@@ -170,4 +170,24 @@
         
     }
 }
+-(void)getteammemberconnect{
+    AppDelegate *appdelegat=(AppDelegate *)[[UIApplication sharedApplication]delegate];
+    //NSString *xtable=[[NSString alloc]initWithFormat:@"BASKET_TEAM"];
+    
+    NSString *post=[[NSString alloc]initWithFormat:@"var=2&table=USER as u, BASKET_PLAYER as p WHERE p.userID = u.userID AND p.teamID =%@",appdelegat.teamID];
+    NSData * postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+    NSString * postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    NSMutableURLRequest * request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://140.112.107.77/cgi/xcode_retrive.php?"]]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    NSURLConnection *con = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if (con) {
+        NSLog(@"connection successful");
+    }
+    
+}
+
 @end

@@ -73,12 +73,11 @@
     [self POSTTOUBUNTO];
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://teammate.cc/cgi/applogin.php?userID=%@",[[news valueForKey:@"userID"]componentsJoinedByString:@""]]]];
 }
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     [self POSTTOUBUNTO];
-    }
+}
 
 
 - (void) POSTTOUBUNTO{

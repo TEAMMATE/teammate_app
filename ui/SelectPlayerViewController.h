@@ -30,12 +30,16 @@
 @property (nonatomic,strong)NSString *nowquarter;
 @property (nonatomic,strong)NSMutableArray *playerID;
 
+@property (nonatomic, strong)NSMutableArray *teammatedata;
+@property (nonatomic, strong)NSDictionary *playerInfo;
 
 
 
 - (IBAction)gotorecordpage:(id)sender;
-
-
-
+/*
+-(void)getteammmember{
+    
+}
+*/
 
 @end
