@@ -440,36 +440,38 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     
     //array of events
     update =[[NSMutableArray alloc]init];
+   // NSMutableDictionary *recorddict=[[NSMutableDictionary alloc]init]
     for (NSManagedObject *obj in array) {
         
         NSArray *keyy = [NSArray arrayWithObjects:@"event", @"playerID", @"time", nil];
         NSArray *objectt = [NSArray arrayWithObjects:[obj valueForKey:@"event"], [obj valueForKey:@"name"],[obj valueForKey:@"time"], nil];
         NSDictionary *dictionaryy = [NSDictionary dictionaryWithObjects:objectt forKeys:keyy];
         
-        NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:dictionaryy error:nil];
-        NSString *jsons =[[NSString alloc]initWithData:jsonk encoding:NSUTF8StringEncoding];
+        //NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:dictionaryy error:nil];
+        //NSString *jsons =[[NSString alloc]initWithData:jsonk encoding:NSUTF8StringEncoding];
         
-        NSLog(@"EVENTS = %@",jsons);
-        [update addObject:jsonk];
+       // NSLog(@"EVENTS = %@",jsons);
+       // [update addObject:jsonk];
+        [update addObject:dictionaryy];
     }
     
     //this part is only for check
-    NSData *jsdata =[[CJSONSerializer serializer]serializeArray:update error:nil];
-    NSLog(@"JSDATA = %@",jsdata);
-   // NSString *stringarray=[[update valueForKey:@"name"] componentsJoinedByString:@""];
-   // NSLog(@"TEST= %@",stringarray);
-    NSString *jsstring =[[NSString alloc]initWithData:jsdata encoding:NSUTF8StringEncoding];
-    NSLog(@"JSSTRING = %@",jsstring);
+    //NSData *jsdata =[[CJSONSerializer serializer]serializeArray:update error:nil];
+    NSLog(@"Updataarray = %@",update);
+    // NSString *stringarray=[[update valueForKey:@"name"] componentsJoinedByString:@""];
+    // NSLog(@"TEST= %@",stringarray);
+    //NSString *jsstring =[[NSString alloc]initWithData:jsdata encoding:NSUTF8StringEncoding];
+    //NSLog(@"JSSTRING = %@",jsstring);
     
     NSString *opscore = [NSString stringWithFormat:@"%d",oppscore];
-    NSString *mscore = [NSString stringWithFormat:@"%d",myscore];
-    NSArray *keyvalue =[NSArray arrayWithObjects:@"gameDATE",@"homeID",@"awayID",@"awayName",@"records",@"awayScore_total",@"homeScore_total",@"gameLocation",@"isOverTime", nil];
-    NSArray *objectvalue =[NSArray arrayWithObjects:@"130701",@"1",@"2",opteamname, update, opscore, mscore, @"台大", @"no", nil];
+   // NSString *mscore = [NSString stringWithFormat:@"%d",myscore];
+    NSArray *keyvalue =[NSArray arrayWithObjects:@"gameDATE",@"homeID",@"awayID",@"awayName",@"records",@"awayScore_total",@"gameLocation",@"isOverTime", nil];
+    NSArray *objectvalue =[NSArray arrayWithObjects:@"130701",@"1",@"71",opteamname.text, update, opscore, @"台大", @"no", nil];
     NSDictionary *gameinfo =[NSDictionary dictionaryWithObjects:objectvalue forKeys:keyvalue];
-    
+    NSLog(@"gameInfo=%@",gameinfo);
     NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:gameinfo error:nil];
     NSString *jsons =[[NSString alloc]initWithData:jsonk encoding:NSUTF8StringEncoding];
-    
+    //NSString *jsum=[jsstring stringByAppendingString:jsons];
     
     
         NSString *post =[[NSString alloc] initWithFormat:@"result=%@",jsons];
@@ -495,10 +497,10 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
         
         NSString *data=[[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
     
-    NSLog(@"DATA = %@",data);
+        NSLog(@"DATA = %@",data);
         
     
-    // delete data
+    // delete core data
     for (NSManagedObject *obj in array) {
         [appdelegat.managedObjectContext deleteObject:obj];
     }
@@ -507,10 +509,11 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
 }
 
 
+//playerID=[NSMutableArray arrayWithObjects:@"12",@"1",@"27",@"28",@"3",@"54",@"65",Nil];
 
 - (IBAction)player1:(id)sender {
     nowplayer =playername[0];
-    nowplayerid =@"0";
+    nowplayerid =@"12";
     //cell.Playerphoto.image=[UIImage imageNamed:[playerphoto objectAtIndex:indexPath.row]];
     
 }
@@ -520,17 +523,17 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
 }
 - (IBAction)player3:(id)sender {
     nowplayer =playername[2];
-    nowplayerid =@"2";
+    nowplayerid =@"27";
 }
 
 
 - (IBAction)player4:(id)sender {
     nowplayer =playername[3];
-    nowplayerid=@"3";
+    nowplayerid=@"28";
 }
 - (IBAction)player5:(id)sender {
    nowplayer =playername[4];
-    nowplayerid =@"4";
+    nowplayerid =@"3";
 }
 
 

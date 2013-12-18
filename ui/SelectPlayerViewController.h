@@ -28,7 +28,7 @@
 @property int quarternow;
 @property int lasttime;
 @property (nonatomic,strong)NSString *nowquarter;
-
+@property (nonatomic,strong)NSMutableArray *playerID;
 
 
 

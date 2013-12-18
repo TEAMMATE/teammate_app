@@ -18,7 +18,9 @@
 }
 @property (strong, nonatomic) IBOutlet UIView *playerpage;
 - (IBAction)logoutaction:(id)sender;
+
 - (IBAction)showlog:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UILabel *userheight;
 @property (weak, nonatomic) IBOutlet UILabel *userweight;

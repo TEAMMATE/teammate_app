@@ -20,7 +20,7 @@
 @synthesize quartercount;
 @synthesize quarterlong;
 @synthesize oppname;
-
+@synthesize playerID;
 //variable
 @synthesize myteamscoer;
 @synthesize oppteamscore;
@@ -40,7 +40,7 @@
     playerphoto=[NSMutableArray arrayWithObjects:@"Jason.jpg",@"Terry.jpg",@"Star.jpg",@"Ike.jpg",@"George.jpg",@"Lin.jpg",@"Ding.jpg", nil];
     playerposition=[NSMutableArray arrayWithObjects:@"PF",@"PG",@"SF",@"C",@"SG",@"SG",@"c",nil];
     playernumber=[NSMutableArray arrayWithObjects:@"8",@"21",@"15",@"0",@"24",@"7",@"23", nil];
-    
+    playerID=[NSMutableArray arrayWithObjects:@"12",@"1",@"27",@"28",@"3",@"54",@"65",Nil];
     playerselected=[[NSMutableArray alloc]init];
     UITableView *allplayers=[[UITableView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height-200)];
     self.title=@"選擇上場球員";

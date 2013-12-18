@@ -30,7 +30,6 @@
 		045FE84017ABAFAD0064D82B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045FE83E17ABAFAD0064D82B /* Model.xcdatamodeld */; };
 		049AD2AF185DF6230076F5AD /* tabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AD2AE185DF6230076F5AD /* tabViewController.m */; };
 		049AD2B2185DF7F90076F5AD /* introViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049AD2B1185DF7F90076F5AD /* introViewController.m */; };
-		049AD2B418617EFE0076F5AD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AD2B318617EFE0076F5AD /* FacebookSDK.framework */; };
 		049AD2B618617FAA0076F5AD /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2B518617FAA0076F5AD /* game.png */; };
 		049AD2B818617FBF0076F5AD /* Star.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2B718617FBF0076F5AD /* Star.jpg */; };
 		049AD2BA186180110076F5AD /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2B9186180110076F5AD /* player.png */; };
@@ -42,6 +41,7 @@
 		049AD2C6186180B50076F5AD /* Ike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C5186180B50076F5AD /* Ike.jpg */; };
 		049AD2C8186180C10076F5AD /* Terry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C7186180C10076F5AD /* Terry.jpg */; };
 		049AD2CA186180E90076F5AD /* teammany.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C9186180E90076F5AD /* teammany.png */; };
+		049AD2CE1861854B0076F5AD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AD2CD1861854B0076F5AD /* FacebookSDK.framework */; };
 		04A32BCE17A2990B0010CC1C /* teamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BCD17A2990B0010CC1C /* teamViewController.m */; };
 		04A32BD117A2991D0010CC1C /* playerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD017A2991C0010CC1C /* playerViewController.m */; };
 		04A32BD417A299600010CC1C /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD317A299600010CC1C /* recordViewController.m */; };
@@ -99,7 +99,6 @@
 		049AD2AE185DF6230076F5AD /* tabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabViewController.m; sourceTree = "<group>"; };
 		049AD2B0185DF7F90076F5AD /* introViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = introViewController.h; sourceTree = "<group>"; };
 		049AD2B1185DF7F90076F5AD /* introViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = introViewController.m; sourceTree = "<group>"; };
-		049AD2B318617EFE0076F5AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
 		049AD2B518617FAA0076F5AD /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
 		049AD2B718617FBF0076F5AD /* Star.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Star.jpg; sourceTree = "<group>"; };
 		049AD2B9186180110076F5AD /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		049AD2C5186180B50076F5AD /* Ike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ike.jpg; sourceTree = "<group>"; };
 		049AD2C7186180C10076F5AD /* Terry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Terry.jpg; sourceTree = "<group>"; };
 		049AD2C9186180E90076F5AD /* teammany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teammany.png; sourceTree = "<group>"; };
+		049AD2CD1861854B0076F5AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
 		04A32BCC17A2990B0010CC1C /* teamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamViewController.h; sourceTree = "<group>"; };
 		04A32BCD17A2990B0010CC1C /* teamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamViewController.m; sourceTree = "<group>"; };
 		04A32BCF17A2991C0010CC1C /* playerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerViewController.h; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BE4C3A17B1781300FAAEC1 /* CoreData.framework in Frameworks */,
-				049AD2B418617EFE0076F5AD /* FacebookSDK.framework in Frameworks */,
+				049AD2CE1861854B0076F5AD /* FacebookSDK.framework in Frameworks */,
 				041D19D7177D6CC700352260 /* UIKit.framework in Frameworks */,
 				041D19D9177D6CC700352260 /* Foundation.framework in Frameworks */,
 				041D19DB177D6CC700352260 /* CoreGraphics.framework in Frameworks */,
@@ -182,7 +182,7 @@
 		041D19D5177D6CC700352260 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				049AD2B318617EFE0076F5AD /* FacebookSDK.framework */,
+				049AD2CD1861854B0076F5AD /* FacebookSDK.framework */,
 				04BE4C3917B1781300FAAEC1 /* CoreData.framework */,
 				041D19D6177D6CC700352260 /* UIKit.framework */,
 				041D19D8177D6CC700352260 /* Foundation.framework */,
@@ -538,6 +538,7 @@
 					"$(inherited)",
 					/Users/mac/Desktop/ui/ui,
 					/Users/mac/Desktop/ui/teammate_app/ui,
+					/Users/mac/Desktop/ui/teammate_app,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ui/ui-Prefix.pch";
@@ -555,6 +556,7 @@
 					"$(inherited)",
 					/Users/mac/Desktop/ui/ui,
 					/Users/mac/Desktop/ui/teammate_app/ui,
+					/Users/mac/Desktop/ui/teammate_app,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ui/ui-Prefix.pch";
