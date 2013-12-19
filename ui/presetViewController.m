@@ -40,6 +40,7 @@
     NSLog(@"%@",self.teamname);
     AppDelegate *appdeleget=[[UIApplication sharedApplication]delegate];
     NSLog(@"teamID=%@",appdeleget.teamID);
+    [self getteammember];
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,15 +146,25 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    data=[[NSMutableData alloc]init];
+    if (congetallteam) {
+        data=[[NSMutableData alloc]init];
+    }else
+    {
+        datamember=[[NSMutableData alloc]init];
+    }
 }
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)thedata{
-    [data appendData:thedata];
-    
+    if (congetallteam) {
+        [data appendData:thedata];
+    }else{
+        [datamember appendData:thedata];
+    }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    if (congetallteam) {
+        
     [UIApplication sharedApplication].networkActivityIndicatorVisible= NO;
     news=[NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
     //NSLog(@"%@",[[news valueForKey:@"teamName"]objectAtIndex:1]);
@@ -165,7 +176,34 @@
         NSLog(@"%@%@%@",[oneteam valueForKey:@"teamID"],[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]);
         [allteam addObject:[NSString stringWithFormat:@"%@%@",[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]]];
         i++;
+        }
+        congetallteam =false;
+    }else if (congetteammember){
+        newsteammember=[NSJSONSerialization JSONObjectWithData:datamember options:Nil error:nil];
+        AppDelegate *appdelegat=[[UIApplication sharedApplication]delegate];
+        NSDictionary *oneteammate=[[NSDictionary alloc]init];
         
+        NSLog(@"123456");
+        NSLog(@"userName=%@",[newsteammember valueForKey:@"userName"]);
+        NSLog(@"playerPos=%@",[newsteammember valueForKey:@"playerPos"]);
+        NSLog(@"playerNum=%@",[newsteammember valueForKey:@"playerNum"]);
+        NSMutableArray *memberlist=[[NSMutableArray alloc]init];
+        for (oneteammate in newsteammember) {
+            //NSLog(@"oneteamate valueforkey=%@",[oneteammate valueForKey:@"playerNum"]);
+            if ([[oneteammate valueForKey:@"playerNum"]intValue]!=0) {
+                NSLog(@"123=%@",[oneteammate valueForKey:@"playerNum"]);
+                NSString *teamplayername=[[NSString alloc]initWithFormat:@"%@",[oneteammate valueForKey:@"userName"]];
+                NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:teamplayername,@"userName",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerPos"]],@"playerPos",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerNum"]],@"playerNum",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"userID"]],@"userID", nil];
+                  NSLog(@"oneteammate=%@",[dic valueForKey:@"userName"]);
+                  NSLog(@"dic=%@",dic);
+                [memberlist addObject:dic];
+                //[appdelegat.teammember addObject:oneteammate];
+            }
+        }
+        NSLog(@"memberlist=%@",memberlist);
+        AppDelegate *appd=[[UIApplication sharedApplication]delegate];
+        congetteammember=false;
+        appd.teammember=memberlist;
     }
     
 }
@@ -184,7 +222,7 @@
     [request setHTTPBody:postData];
     congetteammember = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     if (congetteammember) {
-        NSLog(@"connection successful");
+        NSLog(@"get teammmember connection successful");
     }
     
 }

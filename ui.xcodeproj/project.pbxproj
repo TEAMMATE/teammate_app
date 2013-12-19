@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04125EBD1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125EBC1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png */; };
-		04125EC71852F76E001E1B9A /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125EC41852F76E001E1B9A /* Default-568h@2x~iphone.png */; };
-		04125EC81852F76E001E1B9A /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125EC51852F76E001E1B9A /* Default@2x~iphone.png */; };
-		04125EC91852F76E001E1B9A /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125EC61852F76E001E1B9A /* Default~iphone.png */; };
 		04125ECB1852FC1F001E1B9A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125ECA1852FC1F001E1B9A /* logo.png */; };
 		04125ECD1852FD19001E1B9A /* logo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125ECC1852FD19001E1B9A /* logo4.png */; };
 		04125ECF1852FDB0001E1B9A /* T114.png in Resources */ = {isa = PBXBuildFile; fileRef = 04125ECE1852FDB0001E1B9A /* T114.png */; };
@@ -35,13 +32,14 @@
 		049AD2BA186180110076F5AD /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2B9186180110076F5AD /* player.png */; };
 		049AD2BC186180270076F5AD /* Jason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2BB186180270076F5AD /* Jason.jpg */; };
 		049AD2BE186180460076F5AD /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2BD186180460076F5AD /* basketball.png */; };
-		049AD2C0186180700076F5AD /* teammate.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2BF186180700076F5AD /* teammate.png */; };
+		049AD2C0186180700076F5AD /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2BF186180700076F5AD /* Default~iphone.png */; };
 		049AD2C2186180950076F5AD /* man-figure.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C1186180950076F5AD /* man-figure.png */; };
 		049AD2C4186180AA0076F5AD /* George.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C3186180AA0076F5AD /* George.jpg */; };
 		049AD2C6186180B50076F5AD /* Ike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C5186180B50076F5AD /* Ike.jpg */; };
 		049AD2C8186180C10076F5AD /* Terry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C7186180C10076F5AD /* Terry.jpg */; };
 		049AD2CA186180E90076F5AD /* teammany.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C9186180E90076F5AD /* teammany.png */; };
 		049AD2CE1861854B0076F5AD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AD2CD1861854B0076F5AD /* FacebookSDK.framework */; };
+		049AD2D01862C0E50076F5AD /* teammatelaunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2CF1862C0E50076F5AD /* teammatelaunch.jpg */; };
 		04A32BCE17A2990B0010CC1C /* teamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BCD17A2990B0010CC1C /* teamViewController.m */; };
 		04A32BD117A2991D0010CC1C /* playerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD017A2991C0010CC1C /* playerViewController.m */; };
 		04A32BD417A299600010CC1C /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD317A299600010CC1C /* recordViewController.m */; };
@@ -69,9 +67,6 @@
 
 /* Begin PBXFileReference section */
 		04125EBC1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginWithFacebookNormal@2x.png"; sourceTree = "<group>"; };
-		04125EC41852F76E001E1B9A /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
-		04125EC51852F76E001E1B9A /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
-		04125EC61852F76E001E1B9A /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		04125ECA1852FC1F001E1B9A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		04125ECC1852FD19001E1B9A /* logo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo4.png; sourceTree = "<group>"; };
 		04125ECE1852FDB0001E1B9A /* T114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T114.png; sourceTree = "<group>"; };
@@ -104,13 +99,15 @@
 		049AD2B9186180110076F5AD /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		049AD2BB186180270076F5AD /* Jason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jason.jpg; sourceTree = "<group>"; };
 		049AD2BD186180460076F5AD /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
-		049AD2BF186180700076F5AD /* teammate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teammate.png; sourceTree = "<group>"; };
+		049AD2BF186180700076F5AD /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		049AD2C1186180950076F5AD /* man-figure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man-figure.png"; sourceTree = "<group>"; };
 		049AD2C3186180AA0076F5AD /* George.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = George.jpg; sourceTree = "<group>"; };
 		049AD2C5186180B50076F5AD /* Ike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ike.jpg; sourceTree = "<group>"; };
 		049AD2C7186180C10076F5AD /* Terry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Terry.jpg; sourceTree = "<group>"; };
 		049AD2C9186180E90076F5AD /* teammany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teammany.png; sourceTree = "<group>"; };
 		049AD2CD1861854B0076F5AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
+		049AD2CF1862C0E50076F5AD /* teammatelaunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teammatelaunch.jpg; sourceTree = "<group>"; };
+		049AD2D51862C6180076F5AD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		04A32BCC17A2990B0010CC1C /* teamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamViewController.h; sourceTree = "<group>"; };
 		04A32BCD17A2990B0010CC1C /* teamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamViewController.m; sourceTree = "<group>"; };
 		04A32BCF17A2991C0010CC1C /* playerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerViewController.h; sourceTree = "<group>"; };
@@ -164,6 +161,7 @@
 		041D19CA177D6CC600352260 = {
 			isa = PBXGroup;
 			children = (
+				049AD2D51862C6180076F5AD /* Default.png */,
 				041D19DC177D6CC700352260 /* ui */,
 				041D19D5177D6CC700352260 /* Frameworks */,
 				041D19D4177D6CC700352260 /* Products */,
@@ -237,16 +235,14 @@
 		045FE83D17ABAF550064D82B /* photo */ = {
 			isa = PBXGroup;
 			children = (
+				049AD2CF1862C0E50076F5AD /* teammatelaunch.jpg */,
 				04D141C61801E5A2001617F7 /* Lin.jpg */,
 				04125EBC1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png */,
 				04D141C41801E588001617F7 /* Ding.jpg */,
-				04125EC41852F76E001E1B9A /* Default-568h@2x~iphone.png */,
 				049AD2C5186180B50076F5AD /* Ike.jpg */,
 				04125ECE1852FDB0001E1B9A /* T114.png */,
 				04125ECA1852FC1F001E1B9A /* logo.png */,
-				04125EC51852F76E001E1B9A /* Default@2x~iphone.png */,
 				04125ECC1852FD19001E1B9A /* logo4.png */,
-				04125EC61852F76E001E1B9A /* Default~iphone.png */,
 				049AD2B718617FBF0076F5AD /* Star.jpg */,
 				049AD2B518617FAA0076F5AD /* game.png */,
 				049AD2B9186180110076F5AD /* player.png */,
@@ -257,7 +253,7 @@
 				049AD2C3186180AA0076F5AD /* George.jpg */,
 				049AD2C7186180C10076F5AD /* Terry.jpg */,
 				049AD2C1186180950076F5AD /* man-figure.png */,
-				049AD2BF186180700076F5AD /* teammate.png */,
+				049AD2BF186180700076F5AD /* Default~iphone.png */,
 			);
 			name = photo;
 			sourceTree = "<group>";
@@ -361,16 +357,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04125ECD1852FD19001E1B9A /* logo4.png in Resources */,
-				04125EC81852F76E001E1B9A /* Default@2x~iphone.png in Resources */,
-				04125EC91852F76E001E1B9A /* Default~iphone.png in Resources */,
 				04125ECB1852FC1F001E1B9A /* logo.png in Resources */,
 				049AD2C2186180950076F5AD /* man-figure.png in Resources */,
 				041D19E1177D6CC700352260 /* InfoPlist.strings in Resources */,
-				049AD2C0186180700076F5AD /* teammate.png in Resources */,
+				049AD2C0186180700076F5AD /* Default~iphone.png in Resources */,
 				049AD2B618617FAA0076F5AD /* game.png in Resources */,
 				041D19F0177D6CC700352260 /* MainStoryboard_iPhone.storyboard in Resources */,
+				049AD2D01862C0E50076F5AD /* teammatelaunch.jpg in Resources */,
 				049AD2B818617FBF0076F5AD /* Star.jpg in Resources */,
-				04125EC71852F76E001E1B9A /* Default-568h@2x~iphone.png in Resources */,
 				049AD2CA186180E90076F5AD /* teammany.png in Resources */,
 				049AD2C8186180C10076F5AD /* Terry.jpg in Resources */,
 				04125EBD1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png in Resources */,

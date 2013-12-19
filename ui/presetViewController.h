@@ -17,7 +17,8 @@
     IBOutlet UITextField *quartertime;
     NSArray *news;
     NSMutableData *data;
-   
+    NSArray *newsteammember;
+    NSMutableData *datamember;
 }
 //@property (nonatomic,retain)recordViewController *recordData;
 @property (strong,nonatomic) IBOutlet UITextField *quartercount;

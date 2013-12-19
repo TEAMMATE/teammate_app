@@ -36,7 +36,7 @@
     player=[[NSMutableArray alloc]init];
     
     //這裡要寫要怎麼找到球員
-    player=[NSMutableArray arrayWithObjects:@"Jason",@"Terry",@"Star",@"Ike",@"George",@"Lin",@"Ding",nil];
+    player=[NSMutableArray arrayWithObjects:@"李建宏",@"蔡明訓",@"高小星",@"蔡沛軒",@"楊順堯",@"Lin",@"Ding",nil];
     playerphoto=[NSMutableArray arrayWithObjects:@"Jason.jpg",@"Terry.jpg",@"Star.jpg",@"Ike.jpg",@"George.jpg",@"Lin.jpg",@"Ding.jpg", nil];
     playerposition=[NSMutableArray arrayWithObjects:@"PF",@"PG",@"SF",@"C",@"SG",@"SG",@"c",nil];
     playernumber=[NSMutableArray arrayWithObjects:@"8",@"21",@"15",@"0",@"24",@"7",@"23", nil];
@@ -48,8 +48,16 @@
     allplayers.dataSource=self;
     [self.view addSubview:allplayers];
     
-    
-    
+    AppDelegate *appdeleget=[[UIApplication sharedApplication]delegate];
+    NSMutableArray *teammmmmm=[[NSMutableArray alloc]init];
+    teammmmmm= appdeleget.teammember;
+    NSLog(@"teammmmmm=%@",[[teammmmmm valueForKey:@"userName"]objectAtIndex:1]);
+    NSDictionary *dict=[[NSDictionary alloc]init];
+    for (dict in teammmmmm) {
+        [player addObject:[dict valueForKey:@"userName"]];
+        [playerposition addObject:[dict valueForKey:@"playerPos"]];
+        //[player ]
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

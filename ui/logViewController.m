@@ -31,7 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// Do any additional setup after loading the view.  test
+  //  NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:@"VALUE1",@"key1",@"value2",@"key2", nil];
+   // NSLog(@"dic=%@",dic);
 }
 
 - (void)didReceiveMemoryWarning
