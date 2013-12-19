@@ -146,24 +146,24 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    if (congetallteam) {
+    if (connection== congetallteam) {
         data=[[NSMutableData alloc]init];
-    }else
+    }else if(connection==congetteammember)
     {
         datamember=[[NSMutableData alloc]init];
     }
 }
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)thedata{
-    if (congetallteam) {
+    if (connection== congetallteam) {
         [data appendData:thedata];
-    }else{
+    }else if(connection==congetteammember){
         [datamember appendData:thedata];
     }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    if (congetallteam) {
+    if (connection==congetallteam) {
         
     [UIApplication sharedApplication].networkActivityIndicatorVisible= NO;
     news=[NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
@@ -177,8 +177,8 @@
         [allteam addObject:[NSString stringWithFormat:@"%@%@",[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]]];
         i++;
         }
-        congetallteam =false;
-    }else if (congetteammember){
+       // congetallteam =false;
+    }else if (connection == congetteammember){
         newsteammember=[NSJSONSerialization JSONObjectWithData:datamember options:Nil error:nil];
         AppDelegate *appdelegat=[[UIApplication sharedApplication]delegate];
         NSDictionary *oneteammate=[[NSDictionary alloc]init];
