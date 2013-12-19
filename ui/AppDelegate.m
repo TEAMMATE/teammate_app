@@ -34,7 +34,7 @@
     
     
     self.navController=[[UINavigationController alloc]initWithRootViewController:self.mainViewController];
-    [self.navController setNavigationBarHidden:NO];
+    [self.navController setNavigationBarHidden:YES];
     self.window.rootViewController=self.navController;
     [self.window makeKeyAndVisible];
     
@@ -175,7 +175,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible= NO;
-    news=[NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+    news=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     NSLog(@"user=%@",[[news valueForKey:@"name"]componentsJoinedByString:@""]);
 }
 - (void)applicationWillResignActive:(UIApplication *)application

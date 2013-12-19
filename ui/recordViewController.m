@@ -26,11 +26,21 @@
 @synthesize playernumber;
 @synthesize playername;
 @synthesize playerphoto;
+
+//
 @synthesize person1;
 @synthesize person2;
 @synthesize person3;
 @synthesize person4;
 @synthesize person5;
+
+@synthesize labelfive;
+@synthesize labelfour;
+@synthesize labelone;
+@synthesize labelthree;
+@synthesize labeltwo;
+
+
 
 @synthesize myteamname;
 @synthesize myteamscore;
@@ -43,6 +53,7 @@
 @synthesize lastTime;
 
 @synthesize oppteamID;
+@synthesize personID;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -97,13 +108,26 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     
     countreset = -1;//resetcount is used to change initial time
     isRunning=NO;
-
-    [person1 setImage:[UIImage imageNamed:playerphoto[0]] forState:UIControlStateNormal];
-    [person2 setImage:[UIImage imageNamed:playerphoto[1]] forState:UIControlStateNormal];
-    [person3 setImage:[UIImage imageNamed:playerphoto[2]] forState:UIControlStateNormal];
-    [person4 setImage:[UIImage imageNamed:playerphoto[3]] forState:UIControlStateNormal];
-    [person5 setImage:[UIImage imageNamed:playerphoto[4]] forState:UIControlStateNormal];
+    [person1 setTitle:playername[0] forState:UIControlStateNormal];
+    [person2 setTitle:playername[1] forState:UIControlStateNormal];
+    [person3 setTitle:playername[2] forState:UIControlStateNormal];
+    [person4 setTitle:playername[3] forState:UIControlStateNormal];
+    [person5 setTitle:playername[4] forState:UIControlStateNormal];
     
+    labelone.text=[NSString stringWithFormat:@"%@ %@",playernumber[0],playername[0]];
+    labeltwo.text=[NSString stringWithFormat:@"%@ %@",playernumber[1],playername[1]];
+    labelthree.text=[NSString stringWithFormat:@"%@ %@",playernumber[2],playername[2]];
+    labelfour.text=[NSString stringWithFormat:@"%@ %@",playernumber[3],playername[3]];
+    labelfive.text=[NSString stringWithFormat:@"%@ %@",playernumber[4],playername[4]];
+    
+    [person1 setImage:[UIImage imageWithData:playerphoto[0]] forState:UIControlStateNormal];
+    [person2 setImage:[UIImage imageWithData:playerphoto[1]] forState:UIControlStateNormal];
+    [person3 setImage:[UIImage imageWithData:playerphoto[2]] forState:UIControlStateNormal];
+    [person4 setImage:[UIImage imageWithData:playerphoto[3]] forState:UIControlStateNormal];
+    [person5 setImage:[UIImage imageWithData:playerphoto[4]] forState:UIControlStateNormal];
+  
+    
+    NSLog(@"recordview personID=%@",personID);
     
   /*  NSArray *keyvalue =[NSArray arrayWithObjects:@"gameDate",@"home",@"awayID",@"awayname", nil];
     NSArray *objectvalue =[NSArray arrayWithObjects:@"130701",@"1",@"2",@"台大電機", nil];
@@ -119,6 +143,8 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
 
     NSLog(@"oppteamID%@",oppteamID);
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -398,7 +424,7 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     
     AppDelegate *appdelegat =(AppDelegate*)[[UIApplication sharedApplication]delegate];
     NSEntityDescription *entity = [NSEntityDescription insertNewObjectForEntityForName:@"Record" inManagedObjectContext:appdelegat.managedObjectContext];
-    [entity setValue:nowplayer forKey:@"name"];
+    [entity setValue:nowplayerid forKey:@"name"];
     [entity setValue:@"defreb" forKey:@"event"];
     [entity setValue:[NSNumber numberWithInt:eventtime] forKey:@"time"];
     NSError *error;
@@ -431,6 +457,7 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
 
 
 - (IBAction)recorddone:(UIButton *)sender{
+    
     AppDelegate *appdelegat =(AppDelegate*)[[UIApplication sharedApplication]delegate];
     NSEntityDescription *entity =[NSEntityDescription entityForName:@"Record" inManagedObjectContext:appdelegat.managedObjectContext];
     
@@ -510,27 +537,31 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
 
 - (IBAction)player1:(id)sender {
     nowplayer =playername[0];
-    nowplayerid =@"12";
+    nowplayerid =personID[0];
     //cell.Playerphoto.image=[UIImage imageNamed:[playerphoto objectAtIndex:indexPath.row]];
-    
+    NSLog(@"%@",nowplayerid);
 }
 - (IBAction)player2:(id)sender {
     nowplayer =playername[1];
-    nowplayerid=@"1";
+    nowplayerid=personID[1];
+    NSLog(@"%@",nowplayerid);
 }
 - (IBAction)player3:(id)sender {
     nowplayer =playername[2];
-    nowplayerid =@"27";
+    nowplayerid =personID[2];
+    NSLog(@"%@",nowplayerid);
 }
 
 
 - (IBAction)player4:(id)sender {
     nowplayer =playername[3];
-    nowplayerid=@"28";
+    nowplayerid=personID[3];
+    NSLog(@"%@",nowplayerid);
 }
 - (IBAction)player5:(id)sender {
    nowplayer =playername[4];
-    nowplayerid =@"3";
+    nowplayerid =personID[4];
+    NSLog(@"%@",nowplayerid);
 }
 
 

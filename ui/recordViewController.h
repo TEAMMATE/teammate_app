@@ -75,6 +75,8 @@
     // photo
     
 }
+
+
 @property(nonatomic,strong) NSMutableArray *playername;
 @property(nonatomic,strong) NSMutableArray *playernumber;
 @property(nonatomic,strong) NSMutableArray *playerphoto;
@@ -85,6 +87,15 @@
 @property    IBOutlet UIButton *person3;
 @property    IBOutlet UIButton *person4;
 @property    IBOutlet UIButton *person5;
+@property(nonatomic,strong) NSMutableArray *personID;
+@property (weak, nonatomic) IBOutlet UILabel *labelone;
+@property (weak, nonatomic) IBOutlet UILabel *labeltwo;
+@property (weak, nonatomic) IBOutlet UILabel *labelthree;
+@property (weak, nonatomic) IBOutlet UILabel *labelfour;
+@property (weak, nonatomic) IBOutlet UILabel *labelfive;
+
+
+
 ///
 
 @property(nonatomic,strong) IBOutlet UITextView *myteamname;

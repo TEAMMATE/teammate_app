@@ -21,6 +21,8 @@
 //@synthesize connectoincase;
 @synthesize congetallteam;
 @synthesize congetteammember;
+@synthesize oppname;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -80,13 +82,17 @@
 }
 
 - (IBAction)startgame:(id)sender {
+    if ([quartercount.text isEqual:@""] ||  [quartertime.text isEqual:@""] ||[oppname.text isEqual:@""]) {
+        UIAlertView *alertnotselect=[[UIAlertView alloc]initWithTitle:@"請完成所有填寫" message:@"沒有填好是要怎麼開始拉!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertnotselect show];
+    }else{
     SelectPlayerViewController *select=[self.storyboard instantiateViewControllerWithIdentifier:@"selectplayerview"];
     //將三筆資料傳到下一個頁面去
     select.quarterlong=[quartertime.text intValue];
     select.quartercount=[quartercount.text intValue];
     select.oppname=self.oppname.text;
-    NSLog(@"%@",self.oppname.text);
-    NSLog(@"%@",select.oppname);
+    //NSLog(@"%@",self.oppname.text);
+    //NSLog(@"%@",select.oppname);
     select.myteamscoer=0;
     select.oppteamscore=0;
     select.quarternow=1;
@@ -99,7 +105,7 @@
     NSLog(@"test=%lu",(unsigned long)([allteam indexOfObject:self.oppname.text]+1));
     select.oppteamID=[NSString stringWithFormat:@"%lu",(unsigned long)([allteam indexOfObject:self.oppname.text]+1)];
     [self.navigationController pushViewController:select animated:YES];
-    
+    }
 }
 
 
@@ -125,7 +131,7 @@
    // thePickerView.hidden = YES;
 }
 - (void)getteam{
-    AppDelegate *appdelegat=(AppDelegate *)[[UIApplication sharedApplication]delegate];
+    //AppDelegate *appdelegat=(AppDelegate *)[[UIApplication sharedApplication]delegate];
     NSString *xtable=[[NSString alloc]initWithFormat:@"BASKET_TEAM"];
     
     NSString *post=[[NSString alloc]initWithFormat:@"var=2&table=%@",xtable];
@@ -166,12 +172,12 @@
     if (connection==congetallteam) {
         
     [UIApplication sharedApplication].networkActivityIndicatorVisible= NO;
-    news=[NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+    news=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     //NSLog(@"%@",[[news valueForKey:@"teamName"]objectAtIndex:1]);
     allteam=[[NSMutableArray alloc]init];
     int i=0;
     
-    for (oneteam in news) {
+    for (oneteam in news) { 
         //printf("%d\n",i,oneteam);
         NSLog(@"%@%@%@",[oneteam valueForKey:@"teamID"],[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]);
         [allteam addObject:[NSString stringWithFormat:@"%@%@",[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]]];
@@ -179,8 +185,8 @@
         }
        // congetallteam =false;
     }else if (connection == congetteammember){
-        newsteammember=[NSJSONSerialization JSONObjectWithData:datamember options:Nil error:nil];
-        AppDelegate *appdelegat=[[UIApplication sharedApplication]delegate];
+        newsteammember=[NSJSONSerialization JSONObjectWithData:datamember options:NSJSONReadingMutableContainers error:nil];
+        //AppDelegate *appdelegat=[[UIApplication sharedApplication]delegate];
         NSDictionary *oneteammate=[[NSDictionary alloc]init];
         
         NSLog(@"123456");

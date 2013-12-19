@@ -65,8 +65,8 @@
 }
 
 - (IBAction)showlog:(id)sender {
-    AppDelegate *appdeleget=(AppDelegate *)[[UIApplication sharedApplication]delegate];
-    NSString *mail=[[NSString alloc ]initWithFormat:@"%@",appdeleget.useremail];
+    //AppDelegate *appdeleget=(AppDelegate *)[[UIApplication sharedApplication]delegate];
+    //NSString *mail=[[NSString alloc ]initWithFormat:@"%@",appdeleget.useremail];
     NSLog(@"playerview=%@",[[news valueForKey:@"userID"]componentsJoinedByString:@""]);
 
     
@@ -122,7 +122,7 @@
 {
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible= NO;
-    news=[NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+    news=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     //NSLog(@"user=%@",[[news valueForKey:@"name"]componentsJoinedByString:@""]);
     username.text=[NSString stringWithFormat:@"姓名：%@",[[news valueForKey:@"name"]componentsJoinedByString:@""]];
     //NSLog(@"%@",[[news valueForKey:@"userHeight"]componentsJoinedByString:@""]);
@@ -138,7 +138,7 @@
     
     NSURL *url=[[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://140.112.107.77/images/%@.jpg",appdeleget.userID]];
     NSData *mydata=[NSData dataWithContentsOfURL:url];
-        userphoto.image=[UIImage imageWithData:mydata];
+    userphoto.image=[UIImage imageWithData:mydata];
     NSLog(@"teamID=%@",[[news valueForKey:@"teamID"]componentsJoinedByString:@""]);
     appdeleget.teamID=[NSString stringWithFormat:@"%@",[[news valueForKey:@"teamID"]componentsJoinedByString:@""]];
     //connectioncase=@"2";
@@ -148,7 +148,7 @@
 /*
 -(void)getteammember{
     AppDelegate *appdeleget=(AppDelegate *)[[UIApplication sharedApplication]delegate];
-    /*
+ 
      Select * from USER as u, BASKET_PLAYER as p WHERE p.userID = u.userID AND u.userID=30
   
     //用ＩＤ取球隊隊伍ＩＤ teamID

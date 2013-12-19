@@ -272,7 +272,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4VF-fh-Y1C">
                                 <rect key="frame" x="11" y="180" width="60" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="8" backgroundImage="Star.jpg">
+                                <state key="normal" title="8" backgroundImage="default.jpg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -283,7 +283,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i8e-S2-5yo">
                                 <rect key="frame" x="11" y="260" width="60" height="51"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <state key="normal" title="3" backgroundImage="Ding.jpg">
+                                <state key="normal" title="3" backgroundImage="default.jpg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -294,7 +294,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tb8-lK-EB9">
                                 <rect key="frame" x="10" y="338" width="60" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="19" backgroundImage="Jason.jpg">
+                                <state key="normal" title="19" backgroundImage="default.jpg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -305,7 +305,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uxy-ht-uMj">
                                 <rect key="frame" x="11" y="416" width="60" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="?" backgroundImage="Terry.jpg">
+                                <state key="normal" title="?" backgroundImage="default.jpg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -316,7 +316,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nHq-4e-6Dq">
                                 <rect key="frame" x="10" y="497" width="60" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="21" backgroundImage="George.jpg">
+                                <state key="normal" title="21" backgroundImage="default.jpg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -392,6 +392,41 @@
                                     <action selector="changepeople:" destination="Zve-oY-DRN" eventType="touchUpInside" id="VXd-ZT-KQf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 蔡明訓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iPZ-M0-v59">
+                                <rect key="frame" x="2" y="222" width="75" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WQk-US-Pcw">
+                                <rect key="frame" x="11" y="300" width="59" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hIh-bo-AaF">
+                                <rect key="frame" x="9" y="380" width="61" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDS-la-Nqk">
+                                <rect key="frame" x="9" y="458" width="62" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9q-u4-Bxd">
+                                <rect key="frame" x="9" y="538" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784495" green="0.31372550129999999" blue="0.51372551919999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -414,6 +449,11 @@
                         <outlet property="buttundelete" destination="9sF-ux-5e7" id="flH-jw-FIg"/>
                         <outlet property="buttunfoul" destination="IjS-PI-8eE" id="j7I-8e-dcP"/>
                         <outlet property="buttunoffreb" destination="aym-x5-pDh" id="fXK-8t-iH2"/>
+                        <outlet property="labelfive" destination="m9q-u4-Bxd" id="88x-nG-IOx"/>
+                        <outlet property="labelfour" destination="UDS-la-Nqk" id="ahb-0D-VNQ"/>
+                        <outlet property="labelone" destination="iPZ-M0-v59" id="fVP-Es-WXt"/>
+                        <outlet property="labelthree" destination="hIh-bo-AaF" id="rhc-Cx-b2r"/>
+                        <outlet property="labeltwo" destination="WQk-US-Pcw" id="pzG-BE-isB"/>
                         <outlet property="myteamname" destination="Xxn-dI-1xG" id="hzy-SZ-1M3"/>
                         <outlet property="myteamscore" destination="pTz-7h-cSH" id="XHs-vM-xj5"/>
                         <outlet property="nowquarter" destination="Jiy-TU-qaq" id="4dV-Zg-Gow"/>
@@ -958,10 +998,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CIc-Lw-XSR">
-                                <rect key="frame" x="70" y="516" width="192" height="30"/>
+                                <rect key="frame" x="0.0" y="497" width="320" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19682716836734693" green="0.10662828672587883" blue="0.076378675165099857" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="START TEAMMATEE">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.83990353954081631" green="0.14599654983290561" blue="0.14770546252321132" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="xug-u8-MzY" kind="modal" id="177-p0-pl6"/>
@@ -1001,14 +1044,10 @@
     </scenes>
     <resources>
         <image name="21916_3594821567571_1291443488_n.jpg" width="694" height="694"/>
-        <image name="Ding.jpg" width="225" height="225"/>
         <image name="E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png" width="26" height="26"/>
-        <image name="George.jpg" width="720" height="960"/>
-        <image name="Jason.jpg" width="333" height="333"/>
         <image name="LoginWithFacebookNormal.png" width="159" height="29"/>
-        <image name="Star.jpg" width="480" height="640"/>
-        <image name="Terry.jpg" width="694" height="694"/>
         <image name="basketball.png" width="30" height="30"/>
+        <image name="default.jpg" width="250" height="280"/>
         <image name="man-figure.png" width="29" height="30"/>
         <image name="teammatelaunch.jpg" width="538" height="948"/>
         <image name="團體照.jpg" width="2048" height="1536"/>
@@ -1019,6 +1058,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="177-p0-pl6"/>
+        <segue reference="s4N-cC-wBK"/>
     </inferredMetricsTieBreakers>
 </document>
