@@ -26,7 +26,7 @@
 @synthesize oppteamscore;
 @synthesize quarternow;
 @synthesize lasttime;
-
+@synthesize oppteamID;
 
 - (void)viewDidLoad
 {
@@ -163,7 +163,7 @@
         record.quarternow=quarternow;
         record.nowquarter.text=[NSString stringWithFormat:@"%@",nowquarter];
         record.lastTime=lasttime;
-        
+        record.oppteamID=oppteamID;
         
     [self presentViewController:record animated:YES completion:nil];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];

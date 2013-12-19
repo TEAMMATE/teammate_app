@@ -18,7 +18,7 @@
     NSMutableArray *playerposition;
     NSMutableArray *playerphoto;
     NSMutableArray *playernumber;
-}
+    }
 
 @property (nonatomic,strong)NSString *oppname;
 @property int quartercount;
@@ -32,7 +32,7 @@
 
 @property (nonatomic, strong)NSMutableArray *teammatedata;
 @property (nonatomic, strong)NSDictionary *playerInfo;
-
+@property (nonatomic, strong)NSString *oppteamID;
 
 
 - (IBAction)gotorecordpage:(id)sender;

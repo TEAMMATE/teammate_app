@@ -102,6 +102,7 @@
 
 
 @property (strong,nonatomic) NSString *awayname;
+@property (strong,nonatomic) NSString *oppteamID;
 @property  int quartercount;
 @property  int quarterlong;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;

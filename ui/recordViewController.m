@@ -42,6 +42,7 @@
 @synthesize nowTime;
 @synthesize lastTime;
 
+@synthesize oppteamID;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -116,7 +117,7 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
    //update =[[NSMutableArray alloc]init];
     //[update addObject:jsons];
 
-   
+    NSLog(@"oppteamID%@",oppteamID);
 }
 
 - (void)didReceiveMemoryWarning
@@ -458,15 +459,11 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     //this part is only for check
     //NSData *jsdata =[[CJSONSerializer serializer]serializeArray:update error:nil];
     NSLog(@"Updataarray = %@",update);
-    // NSString *stringarray=[[update valueForKey:@"name"] componentsJoinedByString:@""];
-    // NSLog(@"TEST= %@",stringarray);
-    //NSString *jsstring =[[NSString alloc]initWithData:jsdata encoding:NSUTF8StringEncoding];
-    //NSLog(@"JSSTRING = %@",jsstring);
     
     NSString *opscore = [NSString stringWithFormat:@"%d",oppscore];
    // NSString *mscore = [NSString stringWithFormat:@"%d",myscore];
     NSArray *keyvalue =[NSArray arrayWithObjects:@"gameDATE",@"homeID",@"awayID",@"awayName",@"records",@"awayScore_total",@"gameLocation",@"isOverTime", nil];
-    NSArray *objectvalue =[NSArray arrayWithObjects:@"130701",@"55",@"71",opteamname.text, update, opscore, @"台大", @"no", nil];
+    NSArray *objectvalue =[NSArray arrayWithObjects:@"131219",appdelegat.teamID,oppteamID,opteamname.text, update, opscore, @"台大", @"no", nil];
     NSDictionary *gameinfo =[NSDictionary dictionaryWithObjects:objectvalue forKeys:keyvalue];
     NSLog(@"gameInfo=%@",gameinfo);
     NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:gameinfo error:nil];

@@ -91,7 +91,12 @@
     select.quarternow=1;
     select.nowquarter=@"第一節";
     select.lasttime=[quartertime.text intValue]*60;
-
+   // NSLog(@"%@==%@",[allteam objectAtIndex:3],[self.oppname.text]);
+   // for (int i=1; [allteam objectAtIndex:i]==self.oppname.text; i++) {
+   //     NSLog(@"i=%d%@",i,[allteam objectAtIndex:i]);
+   // }
+    NSLog(@"test=%lu",(unsigned long)([allteam indexOfObject:self.oppname.text]+1));
+    select.oppteamID=[NSString stringWithFormat:@"%lu",(unsigned long)([allteam indexOfObject:self.oppname.text]+1)];
     [self.navigationController pushViewController:select animated:YES];
     
 }
@@ -157,9 +162,10 @@
     
     for (oneteam in news) {
         //printf("%d\n",i,oneteam);
-        //NSLog(@"%@%@",[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]);
+        NSLog(@"%@%@%@",[oneteam valueForKey:@"teamID"],[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]);
         [allteam addObject:[NSString stringWithFormat:@"%@%@",[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]]];
         i++;
+        
     }
     
 }

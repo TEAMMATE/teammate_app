@@ -42,4 +42,5 @@
 
 @property (strong,nonatomic)NSString *oneteam;
 @property (strong,nonatomic)NSMutableArray *allteam;
+
 @end
