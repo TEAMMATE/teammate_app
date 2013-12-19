@@ -199,7 +199,7 @@
             if ([[oneteammate valueForKey:@"playerNum"]intValue]!=0) {
                 NSLog(@"123=%@",[oneteammate valueForKey:@"playerNum"]);
                 NSString *teamplayername=[[NSString alloc]initWithFormat:@"%@",[oneteammate valueForKey:@"userName"]];
-                NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:teamplayername,@"userName",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerPos"]],@"playerPos",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerNum"]],@"playerNum",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"userID"]],@"userID", nil];
+                NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:teamplayername,@"userName",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerPos"]],@"playerPos",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerNum"]],@"playerNum",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerID"]],@"playerID",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"userID"]],@"userID", nil];
                   NSLog(@"oneteammate=%@",[dic valueForKey:@"userName"]);
                   NSLog(@"dic=%@",dic);
                 [memberlist addObject:dic];

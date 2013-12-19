@@ -65,7 +65,7 @@
         NSLog(@"pos=%@",[dict valueForKey:@"playerPos"]);
         [playernumber addObject:[dict valueForKey:@"playerNum"]];
         NSLog(@"%@",[dict valueForKey:@"playerNum"]);
-        [playerID addObject:[dict valueForKey:@"userID"]];
+        [playerID addObject:[dict valueForKey:@"playerID"]];
         NSLog(@"%@",[dict valueForKey:@"userID"]);
         NSString *photopath=@"http://140.112.107.77/images/";
         NSURL *photourl=[[NSURL alloc]initWithString:[[photopath stringByAppendingString:[dict valueForKey:@"userID"]]stringByAppendingString:@".jpg"]];
@@ -191,7 +191,7 @@
         record.playername=[NSMutableArray arrayWithObjects:player[[playerselected[0]intValue]],player[[playerselected[1]intValue]],player[[playerselected[2]intValue]],player[[playerselected[3]intValue]],player[[playerselected[4]intValue]], nil];
         record.playernumber=[NSMutableArray arrayWithObjects:playernumber[[playerselected[0]intValue]],playernumber[[playerselected[1]intValue]],playernumber[[playerselected[2]intValue]],playernumber[[playerselected[3]intValue]],playernumber[[playerselected[4]intValue]], nil];
         record.personID=[NSMutableArray arrayWithObjects:playerID[[playerselected[0]intValue]],playerID[[playerselected[1]intValue]],playerID[[playerselected[2]intValue]],playerID[[playerselected[3]intValue]],playerID[[playerselected[4]intValue]], nil];
-        //NSLog(@"%@",record.personID);
+        NSLog(@"personID=%@",record.personID);
         
         record.opteamscore.text=[NSString stringWithFormat:@"%d",oppteamscore];
         
