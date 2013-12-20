@@ -21,6 +21,8 @@
 @synthesize useremail;
 @synthesize userID;
 @synthesize teammember;
+@synthesize myteamname;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -332,7 +332,6 @@
                                 </state>
                                 <connections>
                                     <action selector="recorddone:" destination="Zve-oY-DRN" eventType="touchUpInside" id="xUu-WH-Nml"/>
-                                    <segue destination="xug-u8-MzY" kind="modal" id="s4N-cC-wBK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IjS-PI-8eE">
@@ -392,41 +391,66 @@
                                     <action selector="changepeople:" destination="Zve-oY-DRN" eventType="touchUpInside" id="VXd-ZT-KQf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 蔡明訓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iPZ-M0-v59">
-                                <rect key="frame" x="2" y="222" width="75" height="37"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 蔡明訓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="iPZ-M0-v59">
+                                <rect key="frame" x="0.0" y="222" width="78" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.93086336096938771" green="0.91011806359579406" blue="0.78076659989004726" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WQk-US-Pcw">
-                                <rect key="frame" x="11" y="300" width="59" height="37"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="WQk-US-Pcw">
+                                <rect key="frame" x="2" y="300" width="76" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.93086336096938771" green="0.91011806359579406" blue="0.78076659989004726" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hIh-bo-AaF">
-                                <rect key="frame" x="9" y="380" width="61" height="37"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="hIh-bo-AaF">
+                                <rect key="frame" x="9" y="380" width="69" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.93086336096938771" green="0.91011806359579406" blue="0.78076659989004726" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDS-la-Nqk">
-                                <rect key="frame" x="9" y="458" width="62" height="39"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="UDS-la-Nqk">
+                                <rect key="frame" x="0.0" y="458" width="78" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.93086336096938771" green="0.91011806359579406" blue="0.78076659989004726" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9q-u4-Bxd">
-                                <rect key="frame" x="9" y="538" width="61" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="m9q-u4-Bxd">
+                                <rect key="frame" x="0.0" y="538" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.93086336096938771" green="0.91011806359579406" blue="0.78076659989004726" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check (1).png" id="mkj-Z2-Eyd">
+                                <rect key="frame" x="2" y="163" width="23" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check (1).png" id="53d-mu-bsq">
+                                <rect key="frame" x="2" y="244" width="23" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check (1).png" id="HCM-UG-Ani">
+                                <rect key="frame" x="2" y="319" width="23" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check (1).png" id="cep-gA-Lc6">
+                                <rect key="frame" x="2" y="392" width="23" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check (1).png" id="7Gs-FN-hth">
+                                <rect key="frame" x="0.0" y="475" width="23" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784495" green="0.31372550129999999" blue="0.51372551919999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -449,6 +473,11 @@
                         <outlet property="buttundelete" destination="9sF-ux-5e7" id="flH-jw-FIg"/>
                         <outlet property="buttunfoul" destination="IjS-PI-8eE" id="j7I-8e-dcP"/>
                         <outlet property="buttunoffreb" destination="aym-x5-pDh" id="fXK-8t-iH2"/>
+                        <outlet property="checkfive" destination="7Gs-FN-hth" id="HpK-AX-7uK"/>
+                        <outlet property="checkfour" destination="cep-gA-Lc6" id="NvD-hp-5bq"/>
+                        <outlet property="checkone" destination="mkj-Z2-Eyd" id="tHb-vJ-OIL"/>
+                        <outlet property="checkthree" destination="HCM-UG-Ani" id="neE-9J-ZCe"/>
+                        <outlet property="checktwo" destination="53d-mu-bsq" id="NRD-rr-zdu"/>
                         <outlet property="labelfive" destination="m9q-u4-Bxd" id="88x-nG-IOx"/>
                         <outlet property="labelfour" destination="UDS-la-Nqk" id="ahb-0D-VNQ"/>
                         <outlet property="labelone" destination="iPZ-M0-v59" id="fVP-Es-WXt"/>
@@ -788,7 +817,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="0Ku-2s-tOX" kind="relationship" relationship="viewControllers" id="yDd-16-0gD"/>
-                        <segue destination="0CL-Vf-JhY" kind="relationship" relationship="viewControllers" id="PWX-PZ-xww"/>
                         <segue destination="fbs-h5-BcY" kind="relationship" relationship="viewControllers" id="M11-8G-fjg"/>
                     </connections>
                 </tabBarController>
@@ -1022,11 +1050,11 @@
             </objects>
             <point key="canvasLocation" x="1009" y="-1130"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Record-->
         <scene sceneID="m2e-uU-Wlc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fbs-h5-BcY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="basketball.png" id="cV7-II-m8J"/>
+                    <tabBarItem key="tabBarItem" title="Record" image="basketball.png" id="cV7-II-m8J"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qm0-6f-YyL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1047,6 +1075,7 @@
         <image name="E7efL7SsP1AnV0yWJReRDUOIPYstEwoUSvYMmTvXJtY.png" width="26" height="26"/>
         <image name="LoginWithFacebookNormal.png" width="159" height="29"/>
         <image name="basketball.png" width="30" height="30"/>
+        <image name="check (1).png" width="320" height="480"/>
         <image name="default.jpg" width="250" height="280"/>
         <image name="man-figure.png" width="29" height="30"/>
         <image name="teammatelaunch.jpg" width="538" height="948"/>
@@ -1057,7 +1086,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="s4N-cC-wBK"/>
-    </inferredMetricsTieBreakers>
 </document>

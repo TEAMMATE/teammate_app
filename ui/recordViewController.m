@@ -68,7 +68,8 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
 
 - (void)viewDidLoad
 {
-    
+    [self disapearcheck];
+    checkone.hidden=NO;
     onequarterlong =quarterlong;
     howmanyquarter =quartercount;
     
@@ -108,6 +109,7 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     
     countreset = -1;//resetcount is used to change initial time
     isRunning=NO;
+    
     [person1 setTitle:playername[0] forState:UIControlStateNormal];
     [person2 setTitle:playername[1] forState:UIControlStateNormal];
     [person3 setTitle:playername[2] forState:UIControlStateNormal];
@@ -125,7 +127,9 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     [person3 setImage:[UIImage imageWithData:playerphoto[2]] forState:UIControlStateNormal];
     [person4 setImage:[UIImage imageWithData:playerphoto[3]] forState:UIControlStateNormal];
     [person5 setImage:[UIImage imageWithData:playerphoto[4]] forState:UIControlStateNormal];
-  
+    
+    AppDelegate *appd=[[UIApplication sharedApplication]delegate];
+    myteamname.text=appd.myteamname;
     
     NSLog(@"recordview personID=%@",personID);
     
@@ -455,9 +459,26 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"button click No");
+            break;
+        case 1:
+            nowTime=0;
+            [self recorddone:(UIButton *)buttondone];
+            break;
+        default:
+            break;
+    }
+}
 
 - (IBAction)recorddone:(UIButton *)sender{
-    
+    if (nowTime != 0) {
+        UIAlertView *alerttimeisnotrunningout=[[UIAlertView alloc]initWithTitle:@"比賽時間尚未結束" message:@"比賽尚未結束\n是否結束比賽？" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        [alerttimeisnotrunningout show];
+        
+    }else{
     AppDelegate *appdelegat =(AppDelegate*)[[UIApplication sharedApplication]delegate];
     NSEntityDescription *entity =[NSEntityDescription entityForName:@"Record" inManagedObjectContext:appdelegat.managedObjectContext];
     
@@ -529,6 +550,10 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
         [appdelegat.managedObjectContext deleteObject:obj];
     }
     [appdelegat.managedObjectContext save:&error];
+    tabViewController *tabview=[self.storyboard instantiateViewControllerWithIdentifier:@"tabbar"];
+    [self presentViewController:tabview animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    }
     
 }
 
@@ -540,15 +565,21 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     nowplayerid =personID[0];
     //cell.Playerphoto.image=[UIImage imageNamed:[playerphoto objectAtIndex:indexPath.row]];
     NSLog(@"%@",nowplayerid);
+    [self disapearcheck];
+    checkone.hidden=NO;
 }
 - (IBAction)player2:(id)sender {
     nowplayer =playername[1];
     nowplayerid=personID[1];
+    [self disapearcheck];
+    checktwo.hidden=NO;
     NSLog(@"%@",nowplayerid);
 }
 - (IBAction)player3:(id)sender {
     nowplayer =playername[2];
     nowplayerid =personID[2];
+    [self disapearcheck];
+    checkthree.hidden=NO;
     NSLog(@"%@",nowplayerid);
 }
 
@@ -556,14 +587,25 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
 - (IBAction)player4:(id)sender {
     nowplayer =playername[3];
     nowplayerid=personID[3];
+    [self disapearcheck];
+    checkfour.hidden=NO;
     NSLog(@"%@",nowplayerid);
 }
 - (IBAction)player5:(id)sender {
    nowplayer =playername[4];
     nowplayerid =personID[4];
+    [self disapearcheck];
+    checkfive.hidden=NO;
     NSLog(@"%@",nowplayerid);
 }
 
+-(void)disapearcheck{
+    checkfive.hidden =YES;
+    checkfour.hidden =YES;
+    checkone.hidden=YES;
+    checkthree.hidden=YES;
+    checktwo.hidden=YES;
+}
 
 
 

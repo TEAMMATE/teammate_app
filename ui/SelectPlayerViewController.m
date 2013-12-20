@@ -20,6 +20,7 @@
 @synthesize quartercount;
 @synthesize quarterlong;
 @synthesize oppname;
+
 @synthesize playerID;
 //variable
 @synthesize myteamscoer;
@@ -58,7 +59,7 @@
     NSDictionary *dict=[[NSDictionary alloc]init];
     NSURL *defaulturl=[[NSURL alloc]initWithString:@"http://140.112.107.77/images/default.jpg"];
     NSData *defaultphotodata=[NSData dataWithContentsOfURL:defaulturl];
-    
+
     for (dict in teammmmmm) {
         [player addObject:[dict valueForKey:@"userName"]];
         [playerposition addObject:[dict valueForKey:@"playerPos"]];
@@ -75,7 +76,7 @@
         } else{
             [playerphoto addObject:defaultphotodata];
             }
-        
+
         NSLog(@"%@",[[photopath stringByAppendingString:[dict valueForKey:@"userID"]]stringByAppendingString:@".jpg"]);
         //playerphoto addObject:]
         //[player ]
@@ -207,6 +208,7 @@
         record.nowquarter.text=[NSString stringWithFormat:@"%@",nowquarter];
         record.lastTime=lasttime;
         record.oppteamID=oppteamID;
+        //record.myteamname.text=
     
     [self presentViewController:record animated:YES completion:nil];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];

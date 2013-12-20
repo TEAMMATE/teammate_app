@@ -11,6 +11,7 @@
 #import "presetViewController.h"
 #import "resettimeViewController.h"
 #import "SelectPlayerViewController.h"
+#import "tabViewController.h"
 @interface recordViewController : UIViewController<NSFetchedResultsControllerDelegate >
 {
        
@@ -74,6 +75,11 @@
     IBOutlet UIButton *buttondone;
     // photo
     
+    __weak IBOutlet UIImageView *checkone;
+    __weak IBOutlet UIImageView *checktwo;
+    __weak IBOutlet UIImageView *checkthree;
+    __weak IBOutlet UIImageView *checkfour;
+    __weak IBOutlet UIImageView *checkfive;
 }
 
 
@@ -87,6 +93,12 @@
 @property    IBOutlet UIButton *person3;
 @property    IBOutlet UIButton *person4;
 @property    IBOutlet UIButton *person5;
+
+
+
+
+
+
 @property(nonatomic,strong) NSMutableArray *personID;
 @property (weak, nonatomic) IBOutlet UILabel *labelone;
 @property (weak, nonatomic) IBOutlet UILabel *labeltwo;

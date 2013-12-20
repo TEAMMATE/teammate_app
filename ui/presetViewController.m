@@ -189,7 +189,6 @@
         //AppDelegate *appdelegat=[[UIApplication sharedApplication]delegate];
         NSDictionary *oneteammate=[[NSDictionary alloc]init];
         
-        NSLog(@"123456");
         NSLog(@"userName=%@",[newsteammember valueForKey:@"userName"]);
         NSLog(@"playerPos=%@",[newsteammember valueForKey:@"playerPos"]);
         NSLog(@"playerNum=%@",[newsteammember valueForKey:@"playerNum"]);
@@ -197,7 +196,7 @@
         for (oneteammate in newsteammember) {
             //NSLog(@"oneteamate valueforkey=%@",[oneteammate valueForKey:@"playerNum"]);
             if ([[oneteammate valueForKey:@"playerNum"]intValue]!=0) {
-                NSLog(@"123=%@",[oneteammate valueForKey:@"playerNum"]);
+                NSLog(@"playerNum=%@",[oneteammate valueForKey:@"playerNum"]);
                 NSString *teamplayername=[[NSString alloc]initWithFormat:@"%@",[oneteammate valueForKey:@"userName"]];
                 NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:teamplayername,@"userName",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerPos"]],@"playerPos",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerNum"]],@"playerNum",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerID"]],@"playerID",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"userID"]],@"userID", nil];
                   NSLog(@"oneteammate=%@",[dic valueForKey:@"userName"]);
@@ -206,11 +205,18 @@
                 //[appdelegat.teammember addObject:oneteammate];
             }
         }
+        
         NSLog(@"memberlist=%@",memberlist);
         AppDelegate *appd=[[UIApplication sharedApplication]delegate];
         congetteammember=false;
         appd.teammember=memberlist;
+        if (appd.teamID !=NULL){
+            NSLog(@"myteamname=%@",[allteam objectAtIndex:[appd.teamID intValue]-1]);
+            appd.myteamname=[allteam objectAtIndex:[appd.teamID intValue]-1];
+            
+        }
     }
+        
     
 }
 -(void)getteammember{

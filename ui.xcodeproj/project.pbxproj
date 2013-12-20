@@ -44,6 +44,7 @@
 		049AD2DA186325FD0076F5AD /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2D7186325FD0076F5AD /* Default~iphone.png */; };
 		049AD2DB186325FD0076F5AD /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2D8186325FD0076F5AD /* Default-568h@2x~iphone.png */; };
 		049AD2DD186340720076F5AD /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2DC186340720076F5AD /* default.jpg */; };
+		049AD2E1186440210076F5AD /* check (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2E0186440210076F5AD /* check (1).png */; };
 		04A32BCE17A2990B0010CC1C /* teamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BCD17A2990B0010CC1C /* teamViewController.m */; };
 		04A32BD117A2991D0010CC1C /* playerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD017A2991C0010CC1C /* playerViewController.m */; };
 		04A32BD417A299600010CC1C /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A32BD317A299600010CC1C /* recordViewController.m */; };
@@ -116,6 +117,7 @@
 		049AD2D7186325FD0076F5AD /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		049AD2D8186325FD0076F5AD /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		049AD2DC186340720076F5AD /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default.jpg; sourceTree = "<group>"; };
+		049AD2E0186440210076F5AD /* check (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check (1).png"; sourceTree = "<group>"; };
 		04A32BCC17A2990B0010CC1C /* teamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamViewController.h; sourceTree = "<group>"; };
 		04A32BCD17A2990B0010CC1C /* teamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamViewController.m; sourceTree = "<group>"; };
 		04A32BCF17A2991C0010CC1C /* playerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerViewController.h; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				049AD2CF1862C0E50076F5AD /* teammatelaunch.jpg */,
+				049AD2E0186440210076F5AD /* check (1).png */,
 				049AD2DC186340720076F5AD /* default.jpg */,
 				04D141C61801E5A2001617F7 /* Lin.jpg */,
 				049AD2D6186325FD0076F5AD /* Default@2x~iphone.png */,
@@ -379,6 +382,7 @@
 				049AD2D01862C0E50076F5AD /* teammatelaunch.jpg in Resources */,
 				049AD2DD186340720076F5AD /* default.jpg in Resources */,
 				049AD2B818617FBF0076F5AD /* Star.jpg in Resources */,
+				049AD2E1186440210076F5AD /* check (1).png in Resources */,
 				049AD2CA186180E90076F5AD /* teammany.png in Resources */,
 				049AD2C8186180C10076F5AD /* Terry.jpg in Resources */,
 				04125EBD1852EDEE001E1B9A /* LoginWithFacebookNormal@2x.png in Resources */,

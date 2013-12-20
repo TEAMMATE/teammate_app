@@ -41,7 +41,7 @@
 
 
 @property(strong,nonatomic)NSMutableArray *teammember;
-
+@property(strong,nonatomic)NSString *myteamname;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 - (void) openSession;
