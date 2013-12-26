@@ -8,6 +8,7 @@
 
 #import "playerViewController.h"
 #import "AppDelegate.h"
+//#import "presetViewController.h"
 @interface playerViewController ()
 
 @end
@@ -77,6 +78,7 @@
     [super viewWillAppear:animated];
     
     [self POSTTOUBUNTO];
+
 }
 
 

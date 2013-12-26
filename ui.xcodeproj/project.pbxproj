@@ -38,7 +38,6 @@
 		049AD2C6186180B50076F5AD /* Ike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C5186180B50076F5AD /* Ike.jpg */; };
 		049AD2C8186180C10076F5AD /* Terry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C7186180C10076F5AD /* Terry.jpg */; };
 		049AD2CA186180E90076F5AD /* teammany.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2C9186180E90076F5AD /* teammany.png */; };
-		049AD2CE1861854B0076F5AD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049AD2CD1861854B0076F5AD /* FacebookSDK.framework */; };
 		049AD2D01862C0E50076F5AD /* teammatelaunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2CF1862C0E50076F5AD /* teammatelaunch.jpg */; };
 		049AD2D9186325FD0076F5AD /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2D6186325FD0076F5AD /* Default@2x~iphone.png */; };
 		049AD2DA186325FD0076F5AD /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 049AD2D7186325FD0076F5AD /* Default~iphone.png */; };
@@ -58,6 +57,7 @@
 		04CFAD5E17CB253800DB66C8 /* 團體照.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04CFAD5D17CB253800DB66C8 /* 團體照.jpg */; };
 		04D141C51801E588001617F7 /* Ding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D141C41801E588001617F7 /* Ding.jpg */; };
 		04D141C71801E5A2001617F7 /* Lin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D141C61801E5A2001617F7 /* Lin.jpg */; };
+		AD0BE938186C036600F0AF5A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0BE937186C036600F0AF5A /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +110,6 @@
 		049AD2C5186180B50076F5AD /* Ike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ike.jpg; sourceTree = "<group>"; };
 		049AD2C7186180C10076F5AD /* Terry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Terry.jpg; sourceTree = "<group>"; };
 		049AD2C9186180E90076F5AD /* teammany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teammany.png; sourceTree = "<group>"; };
-		049AD2CD1861854B0076F5AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
 		049AD2CF1862C0E50076F5AD /* teammatelaunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teammatelaunch.jpg; sourceTree = "<group>"; };
 		049AD2D51862C6180076F5AD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		049AD2D6186325FD0076F5AD /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		04CFAD5D17CB253800DB66C8 /* 團體照.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "團體照.jpg"; sourceTree = "<group>"; };
 		04D141C41801E588001617F7 /* Ding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ding.jpg; sourceTree = "<group>"; };
 		04D141C61801E5A2001617F7 /* Lin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lin.jpg; sourceTree = "<group>"; };
+		AD0BE937186C036600F0AF5A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BE4C3A17B1781300FAAEC1 /* CoreData.framework in Frameworks */,
-				049AD2CE1861854B0076F5AD /* FacebookSDK.framework in Frameworks */,
+				AD0BE938186C036600F0AF5A /* FacebookSDK.framework in Frameworks */,
 				041D19D7177D6CC700352260 /* UIKit.framework in Frameworks */,
 				041D19D9177D6CC700352260 /* Foundation.framework in Frameworks */,
 				041D19DB177D6CC700352260 /* CoreGraphics.framework in Frameworks */,
@@ -190,7 +190,7 @@
 		041D19D5177D6CC700352260 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				049AD2CD1861854B0076F5AD /* FacebookSDK.framework */,
+				AD0BE937186C036600F0AF5A /* FacebookSDK.framework */,
 				04BE4C3917B1781300FAAEC1 /* CoreData.framework */,
 				041D19D6177D6CC700352260 /* UIKit.framework */,
 				041D19D8177D6CC700352260 /* Foundation.framework */,
@@ -554,6 +554,7 @@
 					/Users/mac/Desktop/ui/ui,
 					/Users/mac/Desktop/ui/teammate_app/ui,
 					/Users/mac/Desktop/ui/teammate_app,
+					/Users/sengchiaching/Desktop/teammate/teammate_app/ui,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ui/ui-Prefix.pch";
@@ -573,6 +574,7 @@
 					/Users/mac/Desktop/ui/ui,
 					/Users/mac/Desktop/ui/teammate_app/ui,
 					/Users/mac/Desktop/ui/teammate_app,
+					/Users/sengchiaching/Desktop/teammate/teammate_app/ui,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ui/ui-Prefix.pch";

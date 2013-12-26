@@ -30,6 +30,10 @@
     //self.teamname =allteam;
     AppDelegate *appdeleget=(AppDelegate *)[[UIApplication sharedApplication]delegate];
     NSLog(@"presentemail=%@",appdeleget.useremail);
+    if ([pickopp isEqual:NULL]) {
+        [pickopp reloadAllComponents];
+        NSLog(@"pickerview reload");
+    }
 	// Do any additional setup after loading the view, typically from a nib.
    // [self getteam];
     }
@@ -37,12 +41,19 @@
     [super viewWillAppear:animated];
     [self getteam];
     self.teamname =allteam;
-    [pickopp reloadAllComponents];
-    [pickopp selectRow:0 inComponent:0 animated:YES];
-    NSLog(@"%@",self.teamname);
+  //  [pickopp reloadAllComponents];
+  //  [pickopp selectRow:0 inComponent:0 animated:YES];
+  //  NSLog(@"%@",self.teamname);
     AppDelegate *appdeleget=[[UIApplication sharedApplication]delegate];
-    NSLog(@"teamID=%@",appdeleget.teamID);
+  //  NSLog(@"teamID=%@",appdeleget.teamID);
     [self getteammember];
+    
+   
+}
+- (IBAction)reload:(id)sender {
+    [pickopp reloadAllComponents];
+    oppname.text=[NSString stringWithFormat:@"%@",allteam[0]];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -189,29 +200,29 @@
         //AppDelegate *appdelegat=[[UIApplication sharedApplication]delegate];
         NSDictionary *oneteammate=[[NSDictionary alloc]init];
         
-        NSLog(@"userName=%@",[newsteammember valueForKey:@"userName"]);
-        NSLog(@"playerPos=%@",[newsteammember valueForKey:@"playerPos"]);
-        NSLog(@"playerNum=%@",[newsteammember valueForKey:@"playerNum"]);
+       // NSLog(@"userName=%@",[newsteammember valueForKey:@"userName"]);
+       // NSLog(@"playerPos=%@",[newsteammember valueForKey:@"playerPos"]);
+       // NSLog(@"playerNum=%@",[newsteammember valueForKey:@"playerNum"]);
         NSMutableArray *memberlist=[[NSMutableArray alloc]init];
         for (oneteammate in newsteammember) {
             //NSLog(@"oneteamate valueforkey=%@",[oneteammate valueForKey:@"playerNum"]);
             if ([[oneteammate valueForKey:@"playerNum"]intValue]!=0) {
-                NSLog(@"playerNum=%@",[oneteammate valueForKey:@"playerNum"]);
+                //NSLog(@"playerNum=%@",[oneteammate valueForKey:@"playerNum"]);
                 NSString *teamplayername=[[NSString alloc]initWithFormat:@"%@",[oneteammate valueForKey:@"userName"]];
                 NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:teamplayername,@"userName",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerPos"]],@"playerPos",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerNum"]],@"playerNum",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerID"]],@"playerID",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"userID"]],@"userID", nil];
-                  NSLog(@"oneteammate=%@",[dic valueForKey:@"userName"]);
-                  NSLog(@"dic=%@",dic);
+                //  NSLog(@"oneteammate=%@",[dic valueForKey:@"userName"]);
+                //  NSLog(@"dic=%@",dic);
                 [memberlist addObject:dic];
                 //[appdelegat.teammember addObject:oneteammate];
             }
         }
         
-        NSLog(@"memberlist=%@",memberlist);
+       // NSLog(@"memberlist=%@",memberlist);
         AppDelegate *appd=[[UIApplication sharedApplication]delegate];
         congetteammember=false;
         appd.teammember=memberlist;
         if (appd.teamID !=NULL){
-            NSLog(@"myteamname=%@",[allteam objectAtIndex:[appd.teamID intValue]-1]);
+           // NSLog(@"myteamname=%@",[allteam objectAtIndex:[appd.teamID intValue]-1]);
             appd.myteamname=[allteam objectAtIndex:[appd.teamID intValue]-1];
             
         }
