@@ -40,8 +40,6 @@
     
     [super viewDidLoad];
    // [self POSTTOUBUNTO];
-  
-    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
                                               initWithTitle:@"Logout"
                                               style:UIBarButtonItemStyleBordered
@@ -49,7 +47,11 @@
                                               action:@selector(logoutButtonWasPressed:)];
     AppDelegate *appdeleget=(AppDelegate *)[[UIApplication sharedApplication]delegate];
     NSLog(@"loginemail=%@",appdeleget.useremail);
-    
+    NSDate *myDate=[NSDate new];
+    NSDateFormatter *df=[NSDateFormatter new];
+    [df setDateFormat:@"yyMMdd"];
+    NSLog(@"date=%@",[df stringFromDate:myDate]);
+
     
     
     NSFetchRequest *fetch=[[NSFetchRequest alloc]init];

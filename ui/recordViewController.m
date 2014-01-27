@@ -513,7 +513,13 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     NSString *opscore = [NSString stringWithFormat:@"%d",oppscore];
    // NSString *mscore = [NSString stringWithFormat:@"%d",myscore];
     NSArray *keyvalue =[NSArray arrayWithObjects:@"gameDATE",@"homeID",@"awayID",@"awayName",@"records",@"awayScore_total",@"gameLocation",@"isOverTime", nil];
-    NSArray *objectvalue =[NSArray arrayWithObjects:@"131219",appdelegat.teamID,oppteamID,opteamname.text, update, opscore, @"台大", @"no", nil];
+        //比賽日期時間
+    NSDate *myDate=[NSDate new];
+    NSDateFormatter *df=[NSDateFormatter new];
+    [df setDateFormat:@"yyMMdd"];
+    NSLog(@"date=%@",[df stringFromDate:myDate]);
+
+    NSArray *objectvalue =[NSArray arrayWithObjects:[df stringFromDate:myDate],appdelegat.teamID,oppteamID,opteamname.text, update, opscore, @"台大", @"no", nil];
     NSDictionary *gameinfo =[NSDictionary dictionaryWithObjects:objectvalue forKeys:keyvalue];
     NSLog(@"gameInfo=%@",gameinfo);
     NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:gameinfo error:nil];
