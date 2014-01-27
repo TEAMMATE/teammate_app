@@ -27,16 +27,26 @@
 {
     [super viewDidLoad];
     self.headtitle.title=@"設定比賽";
-    //self.teamname =allteam;
     AppDelegate *appdeleget=(AppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSEntityDescription *entity=[NSEntityDescription entityForName:@"Allteam" inManagedObjectContext:appdeleget.managedObjectContext];
     NSLog(@"presentemail=%@",appdeleget.useremail);
     if ([pickopp isEqual:NULL]) {
         [pickopp reloadAllComponents];
         NSLog(@"pickerview reload");
     }
-	// Do any additional setup after loading the view, typically from a nib.
-   // [self getteam];
+    NSFetchRequest *fetch=[[NSFetchRequest alloc]init];
+    [fetch setEntity:entity];
+    NSArray *array=[appdeleget.managedObjectContext executeFetchRequest:fetch error:nil];
+    allteam=[[NSMutableArray alloc]init];
+    if ([array count]!=0) {
+        for (NSManagedObjectContext *obj in array) {
+            [allteam addObject:[obj valueForKey:@"teamschool"]];
+            NSLog(@"obj=%@",[obj valueForKey:@"teamschool"]);
+        }
     }
+	// Do any additional setup after loading the view, typically from a nib.
+    // [self getteam];
+}
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self getteam];
@@ -44,7 +54,7 @@
   //  [pickopp reloadAllComponents];
   //  [pickopp selectRow:0 inComponent:0 animated:YES];
   //  NSLog(@"%@",self.teamname);
-    AppDelegate *appdeleget=[[UIApplication sharedApplication]delegate];
+  //  AppDelegate *appdeleget=[[UIApplication sharedApplication]delegate];
   //  NSLog(@"teamID=%@",appdeleget.teamID);
     [self getteammember];
     
@@ -84,11 +94,11 @@
     return 1;
 }
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
     return self.allteam.count;
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    //NSLog(@"impicker");
     return self.allteam[row];
 }
 
@@ -181,55 +191,131 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     if (connection==congetallteam) {
-        
     [UIApplication sharedApplication].networkActivityIndicatorVisible= NO;
     news=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    //NSLog(@"%@",[[news valueForKey:@"teamName"]objectAtIndex:1]);
-    allteam=[[NSMutableArray alloc]init];
-    int i=0;
-    
-    for (oneteam in news) { 
-        //printf("%d\n",i,oneteam);
-        NSLog(@"%@%@%@",[oneteam valueForKey:@"teamID"],[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]);
-        [allteam addObject:[NSString stringWithFormat:@"%@%@",[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]]];
-        i++;
+    [allteam removeAllObjects];//清空allteam
+        //再拿一次
+        for (oneteam in news) {
+            //printf("%d\n",i,oneteam);
+            NSLog(@"teamID=%@, teamschool=%@, teamname=%@",[oneteam valueForKey:@"teamID"],[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]);
+            [allteam addObject:[NSString stringWithFormat:@"%@%@",[oneteam valueForKey:@"teamSchool"],[oneteam valueForKey:@"teamName"]]];
+            }
+        //NSLog(@"%@",allteam);
+        
+        //取得本機端資料庫資料，以判別是否需要更新球隊
+        AppDelegate *app=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+        NSEntityDescription *entity1=[NSEntityDescription entityForName:@"Allteam" inManagedObjectContext:app.managedObjectContext];
+        NSFetchRequest *fetch =[[NSFetchRequest alloc]init];
+        [fetch setEntity:entity1];
+        NSArray *array=[app.managedObjectContext executeFetchRequest:fetch error:nil];
+        //殺掉資料庫有的資料
+        for (NSManagedObjectContext *obj in array) {
+            [app.managedObjectContext deleteObject:obj];
         }
-       // congetallteam =false;
+        //在放新地進去
+        for (int i=1;i<[allteam count];i++){
+            NSEntityDescription *entity=[NSEntityDescription insertNewObjectForEntityForName:@"Allteam" inManagedObjectContext:app.managedObjectContext];
+            [entity setValue:[NSNumber numberWithInt:i] forKey:@"teamID"];
+            [entity setValue:allteam[i-1] forKey:@"teamschool"];
+            //NSLog(@"%d%@",i,allteam[i-1]);
+        }
+        for (NSManagedObjectContext *obj in array) {
+            NSLog(@"obj==%@",[obj valueForKey:@"teamschool"]);
+        }
+        // congetallteam =false;
     }else if (connection == congetteammember){
+        
         newsteammember=[NSJSONSerialization JSONObjectWithData:datamember options:NSJSONReadingMutableContainers error:nil];
         //AppDelegate *appdelegat=[[UIApplication sharedApplication]delegate];
         NSDictionary *oneteammate=[[NSDictionary alloc]init];
+        AppDelegate *appd=[[UIApplication sharedApplication]delegate];
         
-       // NSLog(@"userName=%@",[newsteammember valueForKey:@"userName"]);
-       // NSLog(@"playerPos=%@",[newsteammember valueForKey:@"playerPos"]);
-       // NSLog(@"playerNum=%@",[newsteammember valueForKey:@"playerNum"]);
         NSMutableArray *memberlist=[[NSMutableArray alloc]init];
+        NSEntityDescription *entity1=[NSEntityDescription entityForName:@"Teammate" inManagedObjectContext:appd.managedObjectContext];
+        NSFetchRequest *fetch=[[NSFetchRequest alloc]init];
+        [fetch setEntity:entity1];
+        NSArray *array=[appd.managedObjectContext executeFetchRequest:fetch error:Nil];
+        for (NSManagedObjectContext *objk in array) {
+            [appd.managedObjectContext deleteObject:objk];
+        }
+        NSString *photopath=@"http://140.112.107.77/images/";
+        NSURL *defaulturl=[[NSURL alloc]initWithString:@"http://140.112.107.77/images/default.jpg"];
+        NSData *defaultphotodata=[NSData dataWithContentsOfURL:defaulturl];
+        int index=1;//存照片用的變數
+        
         for (oneteammate in newsteammember) {
-            //NSLog(@"oneteamate valueforkey=%@",[oneteammate valueForKey:@"playerNum"]);
             if ([[oneteammate valueForKey:@"playerNum"]intValue]!=0) {
-                //NSLog(@"playerNum=%@",[oneteammate valueForKey:@"playerNum"]);
                 NSString *teamplayername=[[NSString alloc]initWithFormat:@"%@",[oneteammate valueForKey:@"userName"]];
                 NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:teamplayername,@"userName",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerPos"]],@"playerPos",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerNum"]],@"playerNum",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"playerID"]],@"playerID",[NSString stringWithFormat:@"%@",[oneteammate valueForKey:@"userID"]],@"userID", nil];
-                //  NSLog(@"oneteammate=%@",[dic valueForKey:@"userName"]);
-                //  NSLog(@"dic=%@",dic);
+                
+                NSEntityDescription *entity=[NSEntityDescription insertNewObjectForEntityForName:@"Teammate" inManagedObjectContext:appd.managedObjectContext];
+                [entity setValue:[NSNumber numberWithInt:[[dic valueForKey:@"playerID"]intValue]] forKey:@"playerID"];
+                [entity setValue:teamplayername forKey:@"playername"];
+                [entity setValue:[NSNumber numberWithInt:[[dic valueForKey:@"playerNum"]intValue]] forKey:@"playerNumber"];
+                [entity setValue:[dic valueForKey:@"playerPos"] forKey:@"playerposition"];
+                [entity setValue:[NSNumber numberWithInt:[[dic valueForKey:@"userID"]intValue]] forKey:@"userID"];
+                NSURL *photourl=[[NSURL alloc]initWithString:[[photopath stringByAppendingString:[dic valueForKey:@"userID"]]stringByAppendingString:@".jpg"]];
+                NSData *myphoto=[NSData dataWithContentsOfURL:photourl];
+                if (myphoto !=nil) {
+                    [self saveImage:[UIImage imageWithData:myphoto] path:0 userID:[dic valueForKey:@"userID"]];
+                }else
+                {
+                    [self saveImage:[UIImage imageWithData:defaultphotodata] path:0 userID:[dic valueForKey:@"userID"]];
+                }
+                index=index+1;
+                
                 [memberlist addObject:dic];
                 //[appdelegat.teammember addObject:oneteammate];
             }
         }
+        /*
+         NSURL *photourl=[[NSURL alloc]initWithString:[[photopath stringByAppendingString:[dict valueForKey:@"userID"]]stringByAppendingString:@".jpg"]];
+         NSData *myphoto=[NSData dataWithContentsOfURL:photourl];
+         if (myphoto !=Nil) {
+         [playerphoto addObject:myphoto];
+         } else{
+         [playerphoto addObject:defaultphotodata];
+         }
+         */
+        
+        
+        for (NSManagedObjectContext *obj in array) {
+            NSLog(@"obj=====%@",[obj valueForKey:@"playername"]);
+        }
         
        // NSLog(@"memberlist=%@",memberlist);
-        AppDelegate *appd=[[UIApplication sharedApplication]delegate];
         congetteammember=false;
         appd.teammember=memberlist;
         if (appd.teamID !=NULL){
-           // NSLog(@"myteamname=%@",[allteam objectAtIndex:[appd.teamID intValue]-1]);
+            NSLog(@"myteamname=%@",[allteam objectAtIndex:[appd.teamID intValue]-1]);
             appd.myteamname=[allteam objectAtIndex:[appd.teamID intValue]-1];
             
         }
     }
-        
     
 }
+
+-(void)saveImage:(UIImage *)image path:(int)index userID:(NSString *)userID
+{
+    if (image!=nil) {
+        NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory=[paths objectAtIndex:index];
+        NSString *path=[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",userID]];
+        NSData *data=UIImageJPEGRepresentation(image, 0);
+        [data writeToFile:path atomically:YES];
+    }
+}
+
+-(UIImage *)loadimage:(int)index userID:(NSString *)userID
+{
+    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *ducmentsDirectory =[paths objectAtIndex:index];
+    NSString *path=[ducmentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",userID]];
+    UIImage *image=[UIImage imageWithContentsOfFile:path];
+    return image;
+}
+
+
 -(void)getteammember{
     AppDelegate *appdelegat=(AppDelegate *)[[UIApplication sharedApplication]delegate];
     //NSString *xtable=[[NSString alloc]initWithFormat:@"BASKET_TEAM"];
@@ -245,7 +331,7 @@
     [request setHTTPBody:postData];
     congetteammember = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     if (congetteammember) {
-        NSLog(@"get teammmember connection successful");
+        NSLog(@"get teammember connection successful");
     }
     
 }

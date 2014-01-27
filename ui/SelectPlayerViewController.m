@@ -51,9 +51,23 @@
     allplayers.delegate=self;
     allplayers.dataSource=self;
     [self.view addSubview:allplayers];
-    
-    AppDelegate *appdeleget=[[UIApplication sharedApplication]delegate];
     NSMutableArray *teammmmmm=[[NSMutableArray alloc]init];
+    AppDelegate *appdeleget=[[UIApplication sharedApplication]delegate];
+    if ([appdeleget.teammember count]<5) {
+    //拿coredata teammate 資料出來
+        NSMutableArray *memberlist=[[NSMutableArray alloc]init];
+        NSEntityDescription *entity=[NSEntityDescription entityForName:@"Teammate" inManagedObjectContext:appdeleget.managedObjectContext];
+        NSFetchRequest *fetchq=[[NSFetchRequest alloc]init];
+        [fetchq setEntity:entity];
+        NSArray *array=[appdeleget.managedObjectContext executeFetchRequest:fetchq error:Nil];
+        for (NSManagedObjectContext *obj in array) {
+            NSDictionary *dic=[[NSDictionary alloc]initWithObjectsAndKeys:[obj valueForKey:@"playername"],@"userName",[obj valueForKey:@"playerID"],@"playerID",[obj valueForKey:@"playerNumber"],@"playerNum",[obj valueForKey:@"playerposition"],@"playerPos", nil];
+            [memberlist addObject:dic];
+        }
+        appdeleget.teammember=memberlist;
+    }
+    
+    
     teammmmmm= appdeleget.teammember;
     NSLog(@"teammmmmm=%@",[[teammmmmm valueForKey:@"userName"]objectAtIndex:1]);
     NSDictionary *dict=[[NSDictionary alloc]init];
@@ -72,9 +86,9 @@
         NSURL *photourl=[[NSURL alloc]initWithString:[[photopath stringByAppendingString:[dict valueForKey:@"userID"]]stringByAppendingString:@".jpg"]];
         NSData *myphoto=[NSData dataWithContentsOfURL:photourl];
         if (myphoto !=Nil) {
-            [playerphoto addObject:myphoto];
+            [playerphoto addObject:[self loadimage:0 userID:[dict valueForKey:@"userID"]]];
         } else{
-            [playerphoto addObject:defaultphotodata];
+            [playerphoto addObject:[self loadimage:0 userID:[dict valueForKey:@"userID"]]];
             }
 
         NSLog(@"%@",[[photopath stringByAppendingString:[dict valueForKey:@"userID"]]stringByAppendingString:@".jpg"]);
@@ -94,6 +108,15 @@
     
 }
 
+-(UIImage *)loadimage:(int)index userID:(NSString *)userID
+{
+    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *ducmentsDirectory =[paths objectAtIndex:index];
+    NSString *path=[ducmentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",userID]];
+    UIImage *image=[UIImage imageWithContentsOfFile:path];
+    return image;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return player.count;
 }
@@ -109,7 +132,7 @@
     }
     cell.nameLabel.text=[player objectAtIndex:indexPath.row];
     cell.Playerposition.text=[playerposition objectAtIndex:indexPath.row];
-    cell.Playerphoto.image=[UIImage imageWithData:[playerphoto objectAtIndex:indexPath.row]];
+    cell.Playerphoto.image=playerphoto[indexPath.row];
     cell.backgroundColor=[UIColor redColor];
    // NSLog(@"%d",indexPath.row);
     //NSLog(@"count=%d",playerselected.count);

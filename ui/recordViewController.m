@@ -122,11 +122,11 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     labelfour.text=[NSString stringWithFormat:@"%@ %@",playernumber[3],playername[3]];
     labelfive.text=[NSString stringWithFormat:@"%@ %@",playernumber[4],playername[4]];
     
-    [person1 setImage:[UIImage imageWithData:playerphoto[0]] forState:UIControlStateNormal];
-    [person2 setImage:[UIImage imageWithData:playerphoto[1]] forState:UIControlStateNormal];
-    [person3 setImage:[UIImage imageWithData:playerphoto[2]] forState:UIControlStateNormal];
-    [person4 setImage:[UIImage imageWithData:playerphoto[3]] forState:UIControlStateNormal];
-    [person5 setImage:[UIImage imageWithData:playerphoto[4]] forState:UIControlStateNormal];
+    [person1 setImage:playerphoto[0] forState:UIControlStateNormal];
+    [person2 setImage:playerphoto[1] forState:UIControlStateNormal];
+    [person3 setImage:playerphoto[2] forState:UIControlStateNormal];
+    [person4 setImage:playerphoto[3] forState:UIControlStateNormal];
+    [person5 setImage:playerphoto[4] forState:UIControlStateNormal];
     
     AppDelegate *appd=[[UIApplication sharedApplication]delegate];
     myteamname.text=appd.myteamname;
@@ -490,7 +490,9 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
     //array of events
     update =[[NSMutableArray alloc]init];
    // NSMutableDictionary *recorddict=[[NSMutableDictionary alloc]init]
-    for (NSManagedObject *obj in array) {
+    
+        
+        for (NSManagedObject *obj in array) {
         
         NSArray *keyy = [NSArray arrayWithObjects:@"event", @"playerID", @"time", nil];
         NSArray *objectt = [NSArray arrayWithObjects:[obj valueForKey:@"event"], [obj valueForKey:@"name"],[obj valueForKey:@"time"], nil];
