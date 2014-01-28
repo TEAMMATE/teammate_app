@@ -497,62 +497,53 @@ bool isRunning;//time clock "yes" means time is countdown, "No" means time is id
         NSArray *keyy = [NSArray arrayWithObjects:@"event", @"playerID", @"time", nil];
         NSArray *objectt = [NSArray arrayWithObjects:[obj valueForKey:@"event"], [obj valueForKey:@"name"],[obj valueForKey:@"time"], nil];
         NSDictionary *dictionaryy = [NSDictionary dictionaryWithObjects:objectt forKeys:keyy];
-        
-        //NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:dictionaryy error:nil];
-        //NSString *jsons =[[NSString alloc]initWithData:jsonk encoding:NSUTF8StringEncoding];
-        
-       // NSLog(@"EVENTS = %@",jsons);
-       // [update addObject:jsonk];
         [update addObject:dictionaryy];
     }
     
-    //this part is only for check
-    //NSData *jsdata =[[CJSONSerializer serializer]serializeArray:update error:nil];
     NSLog(@"Updataarray = %@",update);
     
     NSString *opscore = [NSString stringWithFormat:@"%d",oppscore];
    // NSString *mscore = [NSString stringWithFormat:@"%d",myscore];
-    NSArray *keyvalue =[NSArray arrayWithObjects:@"gameDATE",@"homeID",@"awayID",@"awayName",@"records",@"awayScore_total",@"gameLocation",@"isOverTime", nil];
+        NSArray *keyvalue =[NSArray arrayWithObjects:@"gameDATE",@"homeID",@"awayID",@"awayName",@"records",@"awayScore_total",@"gameLocation",@"isOverTime", nil];
         //比賽日期時間
-    NSDate *myDate=[NSDate new];
-    NSDateFormatter *df=[NSDateFormatter new];
-    [df setDateFormat:@"yyMMdd"];
-    NSLog(@"date=%@",[df stringFromDate:myDate]);
+        NSDate *myDate=[NSDate new];
+        NSDateFormatter *df=[NSDateFormatter new];
+        [df setDateFormat:@"yyMMdd"];
+        NSLog(@"date=%@",[df stringFromDate:myDate]);
 
-    NSArray *objectvalue =[NSArray arrayWithObjects:[df stringFromDate:myDate],appdelegat.teamID,oppteamID,opteamname.text, update, opscore, @"台大", @"no", nil];
-    NSDictionary *gameinfo =[NSDictionary dictionaryWithObjects:objectvalue forKeys:keyvalue];
-    NSLog(@"gameInfo=%@",gameinfo);
-    NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:gameinfo error:nil];
-    NSString *jsons =[[NSString alloc]initWithData:jsonk encoding:NSUTF8StringEncoding];
-    //NSString *jsum=[jsstring stringByAppendingString:jsons];
+        NSArray *objectvalue =[NSArray arrayWithObjects:[df stringFromDate:myDate],appdelegat.teamID,oppteamID,opteamname.text, update, opscore, @"台大", @"no", nil];
+        NSDictionary *gameinfo =[NSDictionary dictionaryWithObjects:objectvalue forKeys:keyvalue];
+        NSLog(@"gameInfo=%@",gameinfo);
+        NSData *jsonk =[[CJSONSerializer serializer]serializeDictionary:gameinfo error:nil];
+        NSString *jsons =[[NSString alloc]initWithData:jsonk encoding:NSUTF8StringEncoding];
+        //NSString *jsum=[jsstring stringByAppendingString:jsons];
     
     
         NSString *post =[[NSString alloc] initWithFormat:@"result=%@",jsons];
         NSLog(@"POST = %@",post);
-    
-    
         NSURL *url=[NSURL URLWithString:@"http://140.112.107.77/cgi/cgi_test.php"];
-        
         NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-        
         NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-        
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init] ;
         [request setURL:url];
         [request setHTTPMethod:@"POST"];
         [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
         [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         [request setHTTPBody:postData];
-    
         NSError *error;
         NSURLResponse *response;
         NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         
         NSString *data=[[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
-    
-        NSLog(@"DATA = %@",data);
-        
-    
+        NSLog(@"response=%@",data);
+         if (response==Nil){
+            NSLog(@"connection error");
+        NSEntityDescription *uploadentity=[NSEntityDescription insertNewObjectForEntityForName:@"Upload" inManagedObjectContext:appdelegat.managedObjectContext];
+        [uploadentity setValue:[NSDate new] forKey:@"date"];
+        [uploadentity setValue:jsons forKey:@"json"];
+        [uploadentity setValue:[NSString stringWithFormat:@"%d : %d",myscore,oppscore] forKey:@"score"];
+        [uploadentity setValue:[NSString stringWithFormat:@"vs %@",opteamname.text] forKey:@"title"];
+        }
     // delete core data
     for (NSManagedObject *obj in array) {
         [appdelegat.managedObjectContext deleteObject:obj];

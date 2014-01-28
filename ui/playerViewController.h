@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "uploadViewController.h"
+#import "uploadCell.h"
 //#import "presetViewController.h"
 //#import "AppDelegate.h"
 
@@ -29,5 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userposition;
 @property (weak, nonatomic) IBOutlet UIImageView *userphoto;
 @property (strong, nonatomic)NSString *connectioncase;
+
+- (IBAction)uploadrecord:(id)sender;
 
 @end

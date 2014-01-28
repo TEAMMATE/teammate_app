@@ -58,6 +58,8 @@
 		04D141C51801E588001617F7 /* Ding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D141C41801E588001617F7 /* Ding.jpg */; };
 		04D141C71801E5A2001617F7 /* Lin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D141C61801E5A2001617F7 /* Lin.jpg */; };
 		AD0BE938186C036600F0AF5A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0BE937186C036600F0AF5A /* FacebookSDK.framework */; };
+		ADB243811896EEC200A57A76 /* uploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB243801896EEC200A57A76 /* uploadViewController.m */; };
+		ADB243881896EF5F00A57A76 /* uploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB243871896EF5F00A57A76 /* uploadCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,10 @@
 		04D141C41801E588001617F7 /* Ding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ding.jpg; sourceTree = "<group>"; };
 		04D141C61801E5A2001617F7 /* Lin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lin.jpg; sourceTree = "<group>"; };
 		AD0BE937186C036600F0AF5A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ui/FacebookSDK.framework; sourceTree = "<group>"; };
+		ADB2437F1896EEC200A57A76 /* uploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uploadViewController.h; path = ../uploadViewController.h; sourceTree = "<group>"; };
+		ADB243801896EEC200A57A76 /* uploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = uploadViewController.m; path = ../uploadViewController.m; sourceTree = "<group>"; };
+		ADB243861896EF5F00A57A76 /* uploadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uploadCell.h; path = ../uploadCell.h; sourceTree = "<group>"; };
+		ADB243871896EF5F00A57A76 /* uploadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = uploadCell.m; path = ../uploadCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,8 +235,9 @@
 				04A32BD317A299600010CC1C /* recordViewController.m */,
 				0446B89A17F21F3B000C629E /* presetViewController.h */,
 				0446B89B17F21F3B000C629E /* presetViewController.m */,
-				0446B8A017F44A46000C629E /* resettimeViewController.h */,
 				0446B8A117F44A46000C629E /* resettimeViewController.m */,
+				0446B8A017F44A46000C629E /* resettimeViewController.h */,
+				ADB243851896EF0900A57A76 /* uploadview */,
 				04AD06051801C2070063856F /* selectpeopleFiles */,
 				041D19DF177D6CC700352260 /* InfoPlist.strings */,
 				041D19DE177D6CC700352260 /* ui-Info.plist */,
@@ -298,6 +305,17 @@
 			);
 			name = Source;
 			path = "TouchJSON-master/Source";
+			sourceTree = "<group>";
+		};
+		ADB243851896EF0900A57A76 /* uploadview */ = {
+			isa = PBXGroup;
+			children = (
+				ADB2437F1896EEC200A57A76 /* uploadViewController.h */,
+				ADB243801896EEC200A57A76 /* uploadViewController.m */,
+				ADB243861896EF5F00A57A76 /* uploadCell.h */,
+				ADB243871896EF5F00A57A76 /* uploadCell.m */,
+			);
+			name = uploadview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +456,7 @@
 				04A32BD117A2991D0010CC1C /* playerViewController.m in Sources */,
 				049AD2AF185DF6230076F5AD /* tabViewController.m in Sources */,
 				04A32BD417A299600010CC1C /* recordViewController.m in Sources */,
+				ADB243811896EEC200A57A76 /* uploadViewController.m in Sources */,
 				045FE84017ABAFAD0064D82B /* Model.xcdatamodeld in Sources */,
 				04B31D1617B82EA700B3FFB0 /* CJSONDeserializer.m in Sources */,
 				04B31D1717B82EA700B3FFB0 /* CJSONSerializer.m in Sources */,
@@ -446,6 +465,7 @@
 				0446B89C17F21F3B000C629E /* presetViewController.m in Sources */,
 				0446B8A217F44A46000C629E /* resettimeViewController.m in Sources */,
 				04AD06001801C1AF0063856F /* PlayerCell.m in Sources */,
+				ADB243881896EF5F00A57A76 /* uploadCell.m in Sources */,
 				04AD06041801C1EB0063856F /* SelectPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

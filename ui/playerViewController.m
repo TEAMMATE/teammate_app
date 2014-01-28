@@ -246,4 +246,9 @@
 */
 
 
+- (IBAction)uploadrecord:(id)sender {
+    uploadViewController *uploadview=[self.storyboard instantiateViewControllerWithIdentifier:@"uploadview"];
+    [self presentViewController:uploadview animated:YES completion:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:Nil];
+}
 @end

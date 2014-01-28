@@ -17,6 +17,12 @@
         <attribute name="playerposition" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="Upload" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="json" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="UserInfo" syncable="YES">
         <attribute name="gradeyear" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="height" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
@@ -29,5 +35,6 @@
         <element name="Teammate" positionX="412" positionY="201" width="128" height="105"/>
         <element name="UserInfo" positionX="207" positionY="369" width="128" height="118"/>
         <element name="Allteam" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Upload" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
